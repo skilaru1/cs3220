@@ -1,0 +1,121 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Usha/Documents/cs3220/project3/project3/simulation/modelsim
+vPll
+Z1 !s110 1580958739
+!i10b 1
+!s100 c[<T]DH]FY:l:g3fTRkon3
+IF^Md[VMPdAfdggm;7KZcc1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1580958219
+8C:/Users/Usha/Documents/cs3220/project3/project3/Pll_sim/Pll.vo
+FC:/Users/Usha/Documents/cs3220/project3/project3/Pll_sim/Pll.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1580958739.000000
+!s107 C:/Users/Usha/Documents/cs3220/project3/project3/Pll_sim/Pll.vo|
+!s90 -reportprogress|300|C:/Users/Usha/Documents/cs3220/project3/project3/Pll_sim/Pll.vo|
+!i113 1
+Z5 tCvgOpt 0
+n@pll
+vproject3_frame
+R1
+!i10b 1
+!s100 AVLbmDT@d1J1N_3]oU6nZ0
+Ii=^hcYV<Y=gKj28P2=7cC0
+R2
+R0
+Z6 w1580958216
+Z7 8C:/Users/Usha/Documents/cs3220/project3/project3/project3_frame.v
+Z8 FC:/Users/Usha/Documents/cs3220/project3/project3/project3_frame.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z9 !s107 C:/Users/Usha/Documents/cs3220/project3/project3/project3_frame.v|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usha/Documents/cs3220/project3/project3|C:/Users/Usha/Documents/cs3220/project3/project3/project3_frame.v|
+!i113 1
+Z11 o-vlog01compat -work work
+Z12 !s92 -vlog01compat -work work +incdir+C:/Users/Usha/Documents/cs3220/project3/project3
+R5
+vSevenSeg
+R1
+!i10b 1
+!s100 6U9_D4W_?>BAiUofmj`EP3
+Id2Q:4kJeUnPMSf?Y`@ZXJ2
+R2
+R0
+R6
+8C:/Users/Usha/Documents/cs3220/project3/project3/SevenSeg.v
+FC:/Users/Usha/Documents/cs3220/project3/project3/SevenSeg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Usha/Documents/cs3220/project3/project3/SevenSeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usha/Documents/cs3220/project3/project3|C:/Users/Usha/Documents/cs3220/project3/project3/SevenSeg.v|
+!i113 1
+R11
+R12
+R5
+n@seven@seg
+vSXT
+R1
+!i10b 1
+!s100 obU]330KF@dYkZ]Pem`nK0
+I47AQ7mnJVa:Zj^S7IcKBU0
+R2
+R0
+R6
+R7
+R8
+L0 402
+R3
+r1
+!s85 0
+31
+R4
+R9
+R10
+!i113 1
+R11
+R12
+R5
+n@s@x@t
+vtb_project3
+R1
+!i10b 1
+!s100 A`k3LU]gYD?8KNL6CWcBP1
+I=HG]U@ZYPYPLbU@<>c0KU3
+R2
+R0
+R6
+8C:/Users/Usha/Documents/cs3220/project3/project3/tb_project3.v
+FC:/Users/Usha/Documents/cs3220/project3/project3/tb_project3.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Usha/Documents/cs3220/project3/project3/tb_project3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usha/Documents/cs3220/project3/project3|C:/Users/Usha/Documents/cs3220/project3/project3/tb_project3.v|
+!i113 1
+R11
+R12
+R5
