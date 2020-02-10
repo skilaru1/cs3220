@@ -26,8 +26,8 @@ module project3_frame(
 
   // **[PRJ3-Part2] TODO:Change this to "fmedian2.mif" before submitting
   // [NOTICE] please note that both imem and dmem use the SAME "IDMEMINITFILE".
-  parameter IDMEMINITFILE = "tests/test1.mif";
-  //parameter IDMEMINITFILE = "fmedian2.mif";
+  //parameter IDMEMINITFILE = "tests/test1.mif";
+  parameter IDMEMINITFILE = "fmedian2.mif";
 
  
   
@@ -118,7 +118,7 @@ module project3_frame(
   // during simulation using Model-Sim
   // please remove this part before submitting
   initial begin
-    $readmemh("tests/test1.hex", imem);
+    $readmemh("tests/test2.hex", imem);
   end
     
   assign inst_FE_w = imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]];
@@ -142,9 +142,9 @@ module project3_frame(
     if(reset)
       inst_FE <= {INSTBITS{1'b0}};
     else begin
-      // **TODO: Specify ID latches considering data dependency and branch instruction
+      // **TODO: Specify FE latches considering data dependency and branch instruction
 		// ...
-		
+		inst_FE <= inst_FE_w;
 	 end
   end
 
@@ -188,7 +188,13 @@ module project3_frame(
   // ** TODO: Specify signals such as op{1,2}_ID_w, imm_ID_w, r{d,s,t}_ID_w
   assign op1_ID_w = inst_FE[31:26];
   // ...
-
+	assign op2_ID_w = inst_FE[25:18];
+	assign imm_ID_w = inst_FE[23:8];
+	assign rd_ID_w = inst_FE[11:8];
+	assign rs_ID_w = inst_FE[7:4];
+	assign rt_ID_w = inst_FE[3:0];
+  
+  
   // Read register values
   assign regval1_ID_w = regs[rs_ID_w];
   assign regval2_ID_w = regs[rt_ID_w];
@@ -200,13 +206,24 @@ module project3_frame(
              You may add or change control signals if needed */
   // assign is_br_ID_w = ... ;
   // ...
+  assign is_br_ID_w = (op1_ID_w >= OP1_BEQ && op1_ID_w <= OP1_BNE) ? 1 : 0;
+  assign is_jmp_ID_w = (op1_ID_w == OP1_JAL) ? 1 : 0;
+  assign rd_mem_ID_w = (op1_ID_w == OP1_LW) ? 1 : 0;
+  assign wr_mem_ID_w = (op1_ID_w == OP1_SW) ? 1 : 0;
+  assign wr_reg_ID_w = (op1_ID_w != OP1_SW && !(op1_ID_w >= OP1_BEQ && op1_ID_w <= OP1_BNE)) ? 1 : 0;
   
   assign ctrlsig_ID_w = {is_br_ID_w, is_jmp_ID_w, rd_mem_ID_w, wr_mem_ID_w, wr_reg_ID_w};
   
  
   // TODO: Specify stall condition
   // assign stall_pipe = ... ;
-
+	assign wregno_ID_w = (op1_ID_w == 6'b0) ? rd_ID_w : (!is_br_ID_w && !wr_mem_ID_w) ? rt_ID_w : 4'b0;
+	
+	assign stall_pipe = (wregno_EX == rs_ID_w && wregno_EX != 4'b0) ? 1 : (wregno_EX == rt_ID_w && wregno_EX != 4'b0) ? 1 : 
+								(wregno_MEM == rs_ID_w && wregno_MEM != 4'b0) ? 1 : (wregno_MEM == rt_ID_w && wregno_MEM != 4'b0) ? 1 : 0;
+	
+	// check for all 0 condition
+	
   // ID_latch
   always @ (posedge clk or posedge reset) begin
     if(reset) begin
@@ -222,6 +239,15 @@ module project3_frame(
       PC_ID	 <= PC_FE;
       // **TODO: Specify ID latches considering data dependency and branch instruction
 		// ...
+		//PC_ID <= PC_ID_w;
+		inst_ID	 <= inst_FE;
+      op1_ID	 <= op1_ID_w;
+      op2_ID	 <= op2_ID_w;
+      regval1_ID  <= regval1_ID_w;
+      regval2_ID  <= regval2_ID_w;
+      wregno_ID	 <= wregno_ID_w;
+      ctrlsig_ID <= ctrlsig_ID_w;
+		immval_ID <= sxt_imm_ID_w;
     end
   end
 
@@ -259,6 +285,22 @@ module project3_frame(
 			OP2_LT	 : aluout_EX_r = {31'b0, regval1_ID < regval2_ID};
 		   // **TODO:  complete the other OP2_*s
 		   // ...
+			OP2_LE	 : aluout_EX_r = {31'b0, regval2_ID <= regval2_ID};
+			OP2_NE	 : aluout_EX_r = {31'b0, regval2_ID != regval2_ID};
+			
+			OP2_AND	 : aluout_EX_r = regval1_ID & regval2_ID;
+			OP2_ADD	 : aluout_EX_r = regval1_ID + regval2_ID;
+			OP2_OR	 : aluout_EX_r = regval1_ID | regval2_ID;
+			OP2_XOR	 : aluout_EX_r = regval1_ID ^ regval2_ID;
+			OP2_SUB	 : aluout_EX_r = regval1_ID - regval2_ID;
+			OP2_NAND	 : aluout_EX_r = ~(regval1_ID & regval2_ID);
+			OP2_NOR	 : aluout_EX_r = ~(regval1_ID | regval2_ID);
+			OP2_NXOR	 : aluout_EX_r = ~(regval1_ID ^ regval2_ID);
+			OP2_RSHF	 : aluout_EX_r = regval1_ID >>> regval2_ID;
+			OP2_LSHF	 : aluout_EX_r = regval1_ID <<< regval2_ID;
+			
+			
+			
 			default	 : aluout_EX_r = {DBITS{1'b0}};
 		endcase
 	 else if(op1_ID == OP1_LW || op1_ID == OP1_SW || op1_ID == OP1_ADDI)
@@ -280,7 +322,12 @@ module project3_frame(
   // **TODO: update branch-related signals here **
   //assign mispred_EX_w = ... ;
   //assign pctarget_EX_w = ... ;
-
+  
+	assign mispred_EX_w = is_br_EX_w ? 1 : 0;
+	assign pctarget_EX_w = is_br_EX_w ? (PC_ID + 4 + sxt_imm_ID_w << 2) :
+								  is_jmp_EX_w ? (regval1_ID + sxt_imm_ID_w << 2) : PC_ID + 4;
+	
+	
   // EX_latch
   always @ (posedge clk or posedge reset) begin
     if(reset) begin
@@ -294,6 +341,15 @@ module project3_frame(
     end else begin
       // **TODO: Specify EX latches considering data dependency and branch instruction
 		// ...
+		inst_EX <= inst_ID;
+		aluout_EX <= aluout_EX_r;
+		wregno_EX <= wregno_ID;
+		ctrlsig_EX <= ctrlsig_ID[2:0];
+		mispred_EX <= mispred_EX_w;
+		pctarget_EX <= pctarget_EX_w;
+		regval2_EX <= regval2_ID;
+		
+		
     end
   end
   

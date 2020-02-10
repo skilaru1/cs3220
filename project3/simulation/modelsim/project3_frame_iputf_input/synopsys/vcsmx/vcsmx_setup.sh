@@ -1,3 +1,3 @@
 
 
-vlogan +v2k "C:/Users/Usha/Documents/cs3220/project3/project3/Pll_sim/Pll.vo"
+vlogan +v2k "C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo"

@@ -1,5 +1,5 @@
 Info: Start Nativelink Simulation process
-executing command line: ip-make-simscript --nativelink-mode --output-directory=project3_frame_iputf_input --spd=C:/Users/Usha/Documents/cs3220/project3/project3/Pll.spd 
+executing command line: ip-make-simscript --nativelink-mode --output-directory=project3_frame_iputf_input --spd=C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll.spd 
 
 ========= EDA Simulation Settings =====================
 
