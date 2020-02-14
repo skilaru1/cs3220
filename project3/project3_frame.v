@@ -1,4 +1,4 @@
-module project3_frame(
+ module project3_frame(
   input        CLOCK_50,
   input        RESET_N,
   input  [3:0] KEY,
@@ -22,12 +22,12 @@ module project3_frame(
   parameter ADDRHEX  = 32'hFFFFF000;
   parameter ADDRLEDR = 32'hFFFFF020;
   parameter ADDRKEY  = 32'hFFFFF080;
-  parameter ADDRSW   = 32'hFFFFF090;
+  parameter ADDRSW   = 32'hFFFFF090 ;
 
   // **[PRJ3-Part2] TODO:Change this to "fmedian2.mif" before submitting
-  // [NOTICE] please note that both imem and dmem use the SAME "IDMEMINITFILE".
-  //parameter IDMEMINITFILE = "tests/test1.mif";
-  parameter IDMEMINITFILE = "fmedian2.mif";
+  // [NOTICE] please note that both ime and dmem use the SAME "IDMEMINITFILE".
+  parameter IDMEMINITFILE = "tests/test4.mif";
+  //parameter IDMEMINITFILE = "fmedian2.mif";
 
  
   
@@ -69,6 +69,7 @@ module project3_frame(
   parameter OP2_NXOR = 8'b00101110;
   parameter OP2_RSHF = 8'b00110000;
   parameter OP2_LSHF = 8'b00110001;
+  parameter NOP = 32'b0;
   
   parameter HEXBITS  = 24;
   parameter LEDRBITS = 10;
@@ -118,7 +119,8 @@ module project3_frame(
   // during simulation using Model-Sim
   // please remove this part before submitting
   initial begin
-    $readmemh("tests/test2.hex", imem);
+    $readmemh("tests/test4.hex", imem);
+	 $readmemh("tests/test4.hex", dmem);
   end
     
   assign inst_FE_w = imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]];
@@ -144,7 +146,12 @@ module project3_frame(
     else begin
       // **TODO: Specify FE latches considering data dependency and branch instruction
 		// ...
-		inst_FE <= inst_FE_w;
+		if (mispred_EX)
+			inst_FE <= NOP;
+		else if (stall_pipe)
+			inst_FE <= inst_FE;
+		else
+			inst_FE <= inst_FE_w;
 	 end
   end
 
@@ -206,7 +213,7 @@ module project3_frame(
              You may add or change control signals if needed */
   // assign is_br_ID_w = ... ;
   // ...
-  assign is_br_ID_w = (op1_ID_w >= OP1_BEQ && op1_ID_w <= OP1_BNE) ? 1 : 0;
+  assign is_br_ID_w = (op1_ID_w >= OP1_BEQ && op1_ID_w <= OP1_BNE && op1_ID_w != OP1_JAL) ? 1 : 0;
   assign is_jmp_ID_w = (op1_ID_w == OP1_JAL) ? 1 : 0;
   assign rd_mem_ID_w = (op1_ID_w == OP1_LW) ? 1 : 0;
   assign wr_mem_ID_w = (op1_ID_w == OP1_SW) ? 1 : 0;
@@ -216,11 +223,9 @@ module project3_frame(
   
  
   // TODO: Specify stall condition
-  // assign stall_pipe = ... ;
+  // assign stall_pipe = ... ; 
 	assign wregno_ID_w = (op1_ID_w == 6'b0) ? rd_ID_w : (!is_br_ID_w && !wr_mem_ID_w) ? rt_ID_w : 4'b0;
 	
-	assign stall_pipe = (wregno_EX == rs_ID_w && wregno_EX != 4'b0) ? 1 : (wregno_EX == rt_ID_w && wregno_EX != 4'b0) ? 1 : 
-								(wregno_MEM == rs_ID_w && wregno_MEM != 4'b0) ? 1 : (wregno_MEM == rt_ID_w && wregno_MEM != 4'b0) ? 1 : 0;
 	
 	// check for all 0 condition
 	
@@ -235,7 +240,16 @@ module project3_frame(
       regval2_ID  <= {DBITS{1'b0}};
       wregno_ID	 <= {REGNOBITS{1'b0}};
       ctrlsig_ID <= 5'h0;
-    end else begin
+    end else if (stall_pipe || mispred_EX) begin
+		PC_ID	 <= {DBITS{1'b0}};
+		inst_ID	 <= {INSTBITS{1'b0}};
+      op1_ID	 <= {OP1BITS{1'b0}};
+      op2_ID	 <= {OP2BITS{1'b0}};
+      regval1_ID  <= {DBITS{1'b0}};
+      regval2_ID  <= {DBITS{1'b0}};
+      wregno_ID	 <= {REGNOBITS{1'b0}};
+      ctrlsig_ID <= 5'h0;
+	 end else begin
       PC_ID	 <= PC_FE;
       // **TODO: Specify ID latches considering data dependency and branch instruction
 		// ...
@@ -323,8 +337,8 @@ module project3_frame(
   //assign mispred_EX_w = ... ;
   //assign pctarget_EX_w = ... ;
   
-	assign mispred_EX_w = is_br_EX_w ? 1 : 0;
-	assign pctarget_EX_w = is_br_EX_w ? (PC_ID + 4 + sxt_imm_ID_w << 2) :
+	assign mispred_EX_w = is_br_EX_w || is_jmp_EX_w ? 1 : 0;
+	assign pctarget_EX_w = is_br_EX_w ? (PC_ID + sxt_imm_ID_w << 2) :
 								  is_jmp_EX_w ? (regval1_ID + sxt_imm_ID_w << 2) : PC_ID + 4;
 	
 	
@@ -382,6 +396,7 @@ module project3_frame(
     if(wr_mem_MEM_w)
       dmem[memaddr_MEM_w[DMEMADDRBITS-1:DMEMWORDBITS]] <= regval2_EX;
   end
+  
 
   always @ (posedge clk or posedge reset) begin
     if(reset) begin
@@ -428,6 +443,17 @@ module project3_frame(
 	 end
   end
   
+  //STALL WORK
+  wire rt = (rt_ID_w != 0) && (wregno_MEM == rt_ID_w || wregno_EX == rt_ID_w || wregno_ID == rt_ID_w);
+  wire rs = (rs_ID_w != 0) && (wregno_MEM == rs_ID_w || wregno_EX == rs_ID_w || wregno_ID == rs_ID_w);
+  assign stall_pipe = ((op1_ID_w == 6'b0) && (rs || rt)) ||
+							 ((is_br_ID_w) && (rs || rt )) ||
+							 ((rd_mem_ID_w) && rs) ||
+							 ((is_jmp_ID_w) && rs) ||
+							 ((wr_mem_ID_w) && (rs || rt)) ||
+							 ((inst_FE[31]) && rs); 
+	
+  
   
   /*** I/O ***/
   // Create and connect HEX register
@@ -465,4 +491,6 @@ module SXT(IN, OUT);
 
   assign OUT = {{(OBITS-IBITS){IN[IBITS-1]}}, IN};
 endmodule
+
+
 
