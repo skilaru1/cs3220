@@ -26,8 +26,8 @@
 
   // **[PRJ3-Part2] TODO:Change this to "fmedian2.mif" before submitting
   // [NOTICE] please note that both ime and dmem use the SAME "IDMEMINITFILE".
-  parameter IDMEMINITFILE = "tests/test4.mif";
-  //parameter IDMEMINITFILE = "fmedian2.mif";
+  //parameter IDMEMINITFILE = "tests/test5.mif";
+  parameter IDMEMINITFILE = "tests/fmedian2.mif";
 
  
   
@@ -119,8 +119,8 @@
   // during simulation using Model-Sim
   // please remove this part before submitting
   initial begin
-    $readmemh("tests/test4.hex", imem);
-	 $readmemh("tests/test4.hex", dmem);
+    $readmemh("tests/fmedian2.hex", imem);
+  	 $readmemh("tests/fmedian2.hex", dmem);
   end
     
   assign inst_FE_w = imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]];
@@ -132,7 +132,7 @@
       PC_FE <= pctarget_EX;		
     else if(!stall_pipe)
       PC_FE <= pcplus_FE;
-    else
+    else 
       PC_FE <= PC_FE;
   end
 
@@ -148,7 +148,7 @@
 		// ...
 		if (mispred_EX)
 			inst_FE <= NOP;
-		else if (stall_pipe)
+		else if (stall_pipe === 1)
 			inst_FE <= inst_FE;
 		else
 			inst_FE <= inst_FE_w;
@@ -223,8 +223,18 @@
   
  
   // TODO: Specify stall condition
-  // assign stall_pipe = ... ; 
-	assign wregno_ID_w = (op1_ID_w == 6'b0) ? rd_ID_w : (!is_br_ID_w && !wr_mem_ID_w) ? rt_ID_w : 4'b0;
+  // assign stall_pipe = ... ;
+  wire rt = (rt_ID_w != 4'b0) && (wregno_MEM === rt_ID_w || wregno_EX === rt_ID_w || wregno_ID === rt_ID_w);
+  wire rs = (rs_ID_w != 4'b0) && (wregno_MEM === rs_ID_w || wregno_EX === rs_ID_w || wregno_ID === rs_ID_w);
+  
+  assign stall_pipe = ((op1_ID_w == 6'b0) && (rs || rt)) ||
+							 ((is_br_ID_w) && (rs || rt )) ||
+							 ((rd_mem_ID_w) && rs) ||
+							 ((is_jmp_ID_w) && rs) ||
+							 ((wr_mem_ID_w) && (rs || rt)) ||
+							 ((inst_FE[31]) && rs); 
+							 
+  assign wregno_ID_w = (op1_ID_w == 6'b0) ? rd_ID_w : (!is_br_ID_w && !wr_mem_ID_w) ? rt_ID_w : 4'b0;
 	
 	
 	// check for all 0 condition
@@ -259,7 +269,10 @@
       op2_ID	 <= op2_ID_w;
       regval1_ID  <= regval1_ID_w;
       regval2_ID  <= regval2_ID_w;
-      wregno_ID	 <= wregno_ID_w;
+		if (wregno_ID_w === 4'bx)
+			wregno_ID	 <= {REGNOBITS{1'b0}};
+		else
+			wregno_ID	 <= wregno_ID_w;
       ctrlsig_ID <= ctrlsig_ID_w;
 		immval_ID <= sxt_imm_ID_w;
     end
@@ -293,7 +306,7 @@
   end
 
   always @ (op1_ID or op2_ID or regval1_ID or regval2_ID or immval_ID) begin
-    if(op1_ID == OP1_ALUR)
+    if(op1_ID == OP1_ALUR) begin
       case (op2_ID)
 			OP2_EQ	 : aluout_EX_r = {31'b0, regval1_ID == regval2_ID};
 			OP2_LT	 : aluout_EX_r = {31'b0, regval1_ID < regval2_ID};
@@ -317,7 +330,7 @@
 			
 			default	 : aluout_EX_r = {DBITS{1'b0}};
 		endcase
-	 else if(op1_ID == OP1_LW || op1_ID == OP1_SW || op1_ID == OP1_ADDI)
+	 end else if(op1_ID == OP1_LW || op1_ID == OP1_SW || op1_ID == OP1_ADDI)
 		aluout_EX_r = regval1_ID + immval_ID;
 	 else if(op1_ID == OP1_ANDI)
 		aluout_EX_r = regval1_ID & immval_ID;
@@ -357,7 +370,10 @@
 		// ...
 		inst_EX <= inst_ID;
 		aluout_EX <= aluout_EX_r;
-		wregno_EX <= wregno_ID;
+		if (wregno_ID === 4'bx)
+			wregno_EX <= {REGNOBITS{1'b0}};
+		else
+			wregno_EX <= wregno_ID;
 		ctrlsig_EX <= ctrlsig_ID[2:0];
 		mispred_EX <= mispred_EX_w;
 		pctarget_EX <= pctarget_EX_w;
@@ -407,7 +423,10 @@
     end else begin
 		inst_MEM		<= inst_EX;
       regval_MEM  <= rd_mem_MEM_w ? rd_val_MEM_w : aluout_EX;
-      wregno_MEM  <= wregno_EX;
+		if (wregno_EX === 4'bx)
+			wregno_MEM  <= {REGNOBITS{1'b0}};
+		else
+			wregno_MEM  <= wregno_EX;
       ctrlsig_MEM <= ctrlsig_EX[0];
     end
   end
@@ -444,14 +463,14 @@
   end
   
   //STALL WORK
-  wire rt = (rt_ID_w != 0) && (wregno_MEM == rt_ID_w || wregno_EX == rt_ID_w || wregno_ID == rt_ID_w);
-  wire rs = (rs_ID_w != 0) && (wregno_MEM == rs_ID_w || wregno_EX == rs_ID_w || wregno_ID == rs_ID_w);
-  assign stall_pipe = ((op1_ID_w == 6'b0) && (rs || rt)) ||
-							 ((is_br_ID_w) && (rs || rt )) ||
-							 ((rd_mem_ID_w) && rs) ||
-							 ((is_jmp_ID_w) && rs) ||
-							 ((wr_mem_ID_w) && (rs || rt)) ||
-							 ((inst_FE[31]) && rs); 
+  //wire rt = (rt_ID_w != 0) && (wregno_MEM == rt_ID_w || wregno_EX == rt_ID_w || wregno_ID == rt_ID_w);
+  //wire rs = (rs_ID_w != 0) && (wregno_MEM == rs_ID_w || wregno_EX == rs_ID_w || wregno_ID == rs_ID_w);
+  //assign stall_pipe = ((op1_ID_w == 6'b0) && (rs || rt)) ||
+	//						 ((is_br_ID_w) && (rs || rt )) ||
+	//						 ((rd_mem_ID_w) && rs) ||
+	//						 ((is_jmp_ID_w) && rs) ||
+	//						 ((wr_mem_ID_w) && (rs || rt)) ||
+	//						 ((inst_FE[31]) && rs); 
 	
   
   
@@ -476,8 +495,13 @@
   reg [9:0] LEDR_out;
  
   // **TODO: Write the code for LEDR here
-
-  assign LEDR = LEDR_out;
+	always @ (posedge clk or posedge reset) begin
+		if (reset)
+			LEDR_out <= 10'b0000000000;
+		else if (wr_mem_MEM_w && (memaddr_MEM_w == ADDRLEDR))
+			LEDR_out <= regval2_EX[LEDRBITS-1:0];
+	end
+	assign LEDR = LEDR_out;
   
 endmodule
 
@@ -491,6 +515,4 @@ module SXT(IN, OUT);
 
   assign OUT = {{(OBITS-IBITS){IN[IBITS-1]}}, IN};
 endmodule
-
-
 

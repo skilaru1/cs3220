@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Usha/Documents/cs3220/project3/cs3220/project3/simulation/modelsim
 vPll
-Z1 !s110 1581296279
+Z1 !s110 1582658351
 !i10b 1
 !s100 c[<T]DH]FY:l:g3fTRkon3
 IX`9LYVne^O2f`z:TF5K?F1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1581296279.000000
+Z4 !s108 1582658351.000000
 !s107 C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo|
 !s90 -reportprogress|300|C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo|
 !i113 1
@@ -32,11 +32,11 @@ n@pll
 vproject3_frame
 R1
 !i10b 1
-!s100 _DNAdEzGbIkZ[C057aXlS1
-IWi]1:mfdG=L]WgSiIaVLR2
+!s100 YVWAi<_@1K_mW>lWK8QJH0
+IM2F8KVLjo4`;eNKK;lVEH3
 R2
 R0
-Z6 w1581296144
+Z6 w1582658107
 Z7 8C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v
 Z8 FC:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v
 L0 1
@@ -77,14 +77,14 @@ n@seven@seg
 vSXT
 R1
 !i10b 1
-!s100 zjeb]hL0O5cBDHb^[h2BY0
-IQXzf=0ET;QW6^=D0?>`Uk1
+!s100 6YVmi^M<=0f]IIOQ]U7;d1
+I1mQ=E2JZbllWW00_mEzSa2
 R2
 R0
 R6
 R7
 R8
-L0 459
+L0 509
 R3
 r1
 !s85 0

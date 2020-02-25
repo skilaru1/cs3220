@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Feb 09 20:06:15 2020
+Analysis & Synthesis Status : Successful - Tue Feb 25 14:15:57 2020
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : project3_frame
 Top-level Entity Name : project3_frame
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 890
+Total registers : 958
 Total pins : 68
 Total virtual pins : 0
-Total block memory bits : 1,048,576
+Total block memory bits : 524,288
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
