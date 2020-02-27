@@ -21,51 +21,51 @@
 # 
 # vlog "C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo"
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:19:11 on Feb 25,2020
+# Start time: 19:28:46 on Feb 26,2020
 # vlog -reportprogress 300 C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo 
 # -- Compiling module Pll
 # 
 # Top level modules:
 # 	Pll
-# End time: 14:19:11 on Feb 25,2020, Elapsed time: 0:00:00
+# End time: 19:28:46 on Feb 26,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Usha/Documents/cs3220/project3/cs3220/project3 {C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/SevenSeg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:19:11 on Feb 25,2020
+# Start time: 19:28:46 on Feb 26,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usha/Documents/cs3220/project3/cs3220/project3" C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/SevenSeg.v 
 # -- Compiling module SevenSeg
 # 
 # Top level modules:
 # 	SevenSeg
-# End time: 14:19:11 on Feb 25,2020, Elapsed time: 0:00:00
+# End time: 19:28:46 on Feb 26,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Usha/Documents/cs3220/project3/cs3220/project3 {C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:19:11 on Feb 25,2020
+# Start time: 19:28:46 on Feb 26,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usha/Documents/cs3220/project3/cs3220/project3" C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v 
 # -- Compiling module project3_frame
 # -- Compiling module SXT
 # 
 # Top level modules:
 # 	project3_frame
-# End time: 14:19:11 on Feb 25,2020, Elapsed time: 0:00:00
+# End time: 19:28:46 on Feb 26,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Usha/Documents/cs3220/project3/cs3220/project3 {C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/tb_project3.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:19:11 on Feb 25,2020
+# Start time: 19:28:46 on Feb 26,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usha/Documents/cs3220/project3/cs3220/project3" C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/tb_project3.v 
 # -- Compiling module tb_project3
 # 
 # Top level modules:
 # 	tb_project3
-# End time: 14:19:11 on Feb 25,2020, Elapsed time: 0:00:00
+# End time: 19:28:46 on Feb 26,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_project3
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_project3 
-# Start time: 14:19:11 on Feb 25,2020
+# Start time: 19:28:47 on Feb 26,2020
 # Loading work.tb_project3
 # Loading work.project3_frame
 # Loading work.Pll
@@ -120,14 +120,157 @@
 # Info: sim_additional_refclk_cycles_to_lock = 0
 # Info: output_clock_high_period = 10000.000000
 # Info: output_clock_low_period = 10000.000000
-# ** Warning: (vsim-7) Failed to open readmem file "tests/fmedian2.hex" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(122)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj
-# ** Warning: (vsim-7) Failed to open readmem file "tests/fmedian2.hex" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(123)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj
 # Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
 # Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+add wave -position end  sim:/tb_project3/myprj/DBITS
+add wave -position end  sim:/tb_project3/myprj/INSTSIZE
+add wave -position end  sim:/tb_project3/myprj/INSTBITS
+add wave -position end  sim:/tb_project3/myprj/REGNOBITS
+add wave -position end  sim:/tb_project3/myprj/REGWORDS
+add wave -position end  sim:/tb_project3/myprj/IMMBITS
+add wave -position end  sim:/tb_project3/myprj/STARTPC
+add wave -position end  sim:/tb_project3/myprj/ADDRHEX
+add wave -position end  sim:/tb_project3/myprj/ADDRLEDR
+add wave -position end  sim:/tb_project3/myprj/ADDRKEY
+add wave -position end  sim:/tb_project3/myprj/ADDRSW
+add wave -position end  sim:/tb_project3/myprj/IDMEMINITFILE
+add wave -position end  sim:/tb_project3/myprj/IMEMADDRBITS
+add wave -position end  sim:/tb_project3/myprj/IMEMWORDBITS
+add wave -position end  sim:/tb_project3/myprj/IMEMWORDS
+add wave -position end  sim:/tb_project3/myprj/DMEMADDRBITS
+add wave -position end  sim:/tb_project3/myprj/DMEMWORDBITS
+add wave -position end  sim:/tb_project3/myprj/DMEMWORDS
+add wave -position end  sim:/tb_project3/myprj/OP1BITS
+add wave -position end  sim:/tb_project3/myprj/OP1_ALUR
+add wave -position end  sim:/tb_project3/myprj/OP1_BEQ
+add wave -position end  sim:/tb_project3/myprj/OP1_BLT
+add wave -position end  sim:/tb_project3/myprj/OP1_BLE
+add wave -position end  sim:/tb_project3/myprj/OP1_BNE
+add wave -position end  sim:/tb_project3/myprj/OP1_JAL
+add wave -position end  sim:/tb_project3/myprj/OP1_LW
+add wave -position end  sim:/tb_project3/myprj/OP1_SW
+add wave -position end  sim:/tb_project3/myprj/OP1_ADDI
+add wave -position end  sim:/tb_project3/myprj/OP1_ANDI
+add wave -position end  sim:/tb_project3/myprj/OP1_ORI
+add wave -position end  sim:/tb_project3/myprj/OP1_XORI
+add wave -position end  sim:/tb_project3/myprj/OP2BITS
+add wave -position end  sim:/tb_project3/myprj/OP2_EQ
+add wave -position end  sim:/tb_project3/myprj/OP2_LT
+add wave -position end  sim:/tb_project3/myprj/OP2_LE
+add wave -position end  sim:/tb_project3/myprj/OP2_NE
+add wave -position end  sim:/tb_project3/myprj/OP2_ADD
+add wave -position end  sim:/tb_project3/myprj/OP2_AND
+add wave -position end  sim:/tb_project3/myprj/OP2_OR
+add wave -position end  sim:/tb_project3/myprj/OP2_XOR
+add wave -position end  sim:/tb_project3/myprj/OP2_SUB
+add wave -position end  sim:/tb_project3/myprj/OP2_NAND
+add wave -position end  sim:/tb_project3/myprj/OP2_NOR
+add wave -position end  sim:/tb_project3/myprj/OP2_NXOR
+add wave -position end  sim:/tb_project3/myprj/OP2_RSHF
+add wave -position end  sim:/tb_project3/myprj/OP2_LSHF
+add wave -position end  sim:/tb_project3/myprj/NOP
+add wave -position end  sim:/tb_project3/myprj/HEXBITS
+add wave -position end  sim:/tb_project3/myprj/LEDRBITS
+add wave -position end  sim:/tb_project3/myprj/KEYBITS
+add wave -position end  sim:/tb_project3/myprj/CLOCK_50
+add wave -position end  sim:/tb_project3/myprj/RESET_N
+add wave -position end  sim:/tb_project3/myprj/KEY
+add wave -position end  sim:/tb_project3/myprj/SW
+add wave -position end  sim:/tb_project3/myprj/HEX0
+add wave -position end  sim:/tb_project3/myprj/HEX1
+add wave -position end  sim:/tb_project3/myprj/HEX2
+add wave -position end  sim:/tb_project3/myprj/HEX3
+add wave -position end  sim:/tb_project3/myprj/HEX4
+add wave -position end  sim:/tb_project3/myprj/HEX5
+add wave -position end  sim:/tb_project3/myprj/LEDR
+add wave -position end  sim:/tb_project3/myprj/clk
+add wave -position end  sim:/tb_project3/myprj/locked
+add wave -position end  sim:/tb_project3/myprj/reset
+add wave -position end  sim:/tb_project3/myprj/mispred_EX_w
+add wave -position end  sim:/tb_project3/myprj/mispred_EX
+add wave -position end  sim:/tb_project3/myprj/pctarget_EX
+add wave -position end  sim:/tb_project3/myprj/pcplus_FE
+add wave -position end  sim:/tb_project3/myprj/inst_FE_w
+add wave -position end  sim:/tb_project3/myprj/stall_pipe
+add wave -position end  sim:/tb_project3/myprj/PC_FE
+add wave -position end  sim:/tb_project3/myprj/inst_FE
+add wave -position end  sim:/tb_project3/myprj/imem
+add wave -position end  sim:/tb_project3/myprj/op1_ID_w
+add wave -position end  sim:/tb_project3/myprj/op2_ID_w
+add wave -position end  sim:/tb_project3/myprj/imm_ID_w
+add wave -position end  sim:/tb_project3/myprj/rd_ID_w
+add wave -position end  sim:/tb_project3/myprj/rs_ID_w
+add wave -position end  sim:/tb_project3/myprj/rt_ID_w
+add wave -position end  sim:/tb_project3/myprj/regval1_ID_w
+add wave -position end  sim:/tb_project3/myprj/regval2_ID_w
+add wave -position end  sim:/tb_project3/myprj/sxt_imm_ID_w
+add wave -position end  sim:/tb_project3/myprj/is_br_ID_w
+add wave -position end  sim:/tb_project3/myprj/is_jmp_ID_w
+add wave -position end  sim:/tb_project3/myprj/rd_mem_ID_w
+add wave -position end  sim:/tb_project3/myprj/wr_mem_ID_w
+add wave -position end  sim:/tb_project3/myprj/wr_reg_ID_w
+add wave -position end  sim:/tb_project3/myprj/ctrlsig_ID_w
+add wave -position end  sim:/tb_project3/myprj/wregno_ID_w
+add wave -position end  sim:/tb_project3/myprj/wr_reg_EX_w
+add wave -position end  sim:/tb_project3/myprj/wr_reg_MEM_w
+add wave -position end  sim:/tb_project3/myprj/PC_ID
+add wave -position end  sim:/tb_project3/myprj/regs
+add wave -position end  sim:/tb_project3/myprj/regval1_ID
+add wave -position end  sim:/tb_project3/myprj/regval2_ID
+add wave -position end  sim:/tb_project3/myprj/immval_ID
+add wave -position end  sim:/tb_project3/myprj/op1_ID
+add wave -position end  sim:/tb_project3/myprj/op2_ID
+add wave -position end  sim:/tb_project3/myprj/ctrlsig_ID
+add wave -position end  sim:/tb_project3/myprj/wregno_ID
+add wave -position end  sim:/tb_project3/myprj/wregno_EX
+add wave -position end  sim:/tb_project3/myprj/wregno_MEM
+add wave -position end  sim:/tb_project3/myprj/inst_ID
+add wave -position end  sim:/tb_project3/myprj/rt
+add wave -position end  sim:/tb_project3/myprj/rs
+add wave -position end  sim:/tb_project3/myprj/is_br_EX_w
+add wave -position end  sim:/tb_project3/myprj/is_jmp_EX_w
+add wave -position end  sim:/tb_project3/myprj/pctarget_EX_w
+add wave -position end  sim:/tb_project3/myprj/br_cond_EX
+add wave -position end  sim:/tb_project3/myprj/inst_EX
+add wave -position end  sim:/tb_project3/myprj/ctrlsig_EX
+add wave -position end  sim:/tb_project3/myprj/aluout_EX_r
+add wave -position end  sim:/tb_project3/myprj/aluout_EX
+add wave -position end  sim:/tb_project3/myprj/regval2_EX
+add wave -position end  sim:/tb_project3/myprj/rd_mem_MEM_w
+add wave -position end  sim:/tb_project3/myprj/wr_mem_MEM_w
+add wave -position end  sim:/tb_project3/myprj/memaddr_MEM_w
+add wave -position end  sim:/tb_project3/myprj/rd_val_MEM_w
+add wave -position end  sim:/tb_project3/myprj/inst_MEM
+add wave -position end  sim:/tb_project3/myprj/regval_MEM
+add wave -position end  sim:/tb_project3/myprj/ctrlsig_MEM
+add wave -position end  sim:/tb_project3/myprj/dmem
+add wave -position end  sim:/tb_project3/myprj/wr_reg_WB_w
+add wave -position end  sim:/tb_project3/myprj/HEX_out
+add wave -position end  sim:/tb_project3/myprj/LEDR_out
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
 restart
 # ** Warning: (vsim-3017) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
 #    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
@@ -165,12 +308,8 @@ run
 # Info: sim_additional_refclk_cycles_to_lock = 0
 # Info: output_clock_high_period = 10000.000000
 # Info: output_clock_low_period = 10000.000000
-# ** Warning: (vsim-7) Failed to open readmem file "tests/fmedian2.hex" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(122)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj
-# ** Warning: (vsim-7) Failed to open readmem file "tests/fmedian2.hex" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(123)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj
+run
+run
 # Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
 # Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
 run
@@ -217,6 +356,58 @@ run
 run
 run
 run
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:41:20 on Feb 26,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(151): (vlog-2730) Undefined variable: 'is_br_ID_w'.
+# ** Error (suppressible): C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(172): (vlog-2388) 'is_br_ID_w' already declared in this scope (project3_frame).
+# -- Compiling module SXT
+# End time: 19:41:20 on Feb 26,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+restart
+# Loading work.SXT
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+run
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
 run
 run
 run
@@ -245,6 +436,58 @@ run
 run
 run
 run
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:43:51 on Feb 26,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(151): (vlog-2730) Undefined variable: 'is_br_ID_w'.
+# ** Error (suppressible): C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v(172): (vlog-2388) 'is_br_ID_w' already declared in this scope (project3_frame).
+# -- Compiling module SXT
+# End time: 19:43:51 on Feb 26,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+restart
+# Loading work.SXT
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+run
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
 run
 run
 run
@@ -272,6 +515,61 @@ run
 run
 run
 run
+run
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:48:35 on Feb 26,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# -- Compiling module SXT
+# 
+# Top level modules:
+# 	project3_frame
+# End time: 19:48:35 on Feb 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.project3_frame
+# Loading work.SXT
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+run
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
 run
 run
 run

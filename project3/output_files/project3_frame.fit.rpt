@@ -1,5 +1,5 @@
 Fitter report for project3_frame
-Tue Feb 25 14:16:55 2020
+Wed Feb 26 19:11:02 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -66,15 +66,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Feb 25 14:16:55 2020       ;
+; Fitter Status                   ; Successful - Wed Feb 26 19:11:02 2020       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; project3_frame                              ;
 ; Top-level Entity Name           ; project3_frame                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEFA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 990 / 18,480 ( 5 % )                        ;
-; Total registers                 ; 1015                                        ;
+; Logic utilization (in ALMs)     ; 549 / 18,480 ( 3 % )                        ;
+; Total registers                 ; 664                                         ;
 ; Total pins                      ; 68 / 224 ( 30 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 524,288 / 3,153,920 ( 17 % )                ;
@@ -156,14 +156,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.28        ;
+; Average used               ; 1.21        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   9.8%      ;
-;     Processor 3            ;   9.4%      ;
-;     Processor 4            ;   9.2%      ;
+;     Processor 2            ;   7.8%      ;
+;     Processor 3            ;   6.7%      ;
+;     Processor 4            ;   6.6%      ;
 +----------------------------+-------------+
 
 
@@ -173,63 +173,51 @@ refer to the applicable agreement for further details.
 ; Node                                                                       ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node         ; Destination Port ; Destination Port Name ;
 +----------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------+------------------+-----------------------+
 ; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                          ;                  ;                       ;
+; HEX_out[1]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; HEX_out[1]~DUPLICATE     ;                  ;                       ;
+; HEX_out[9]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; HEX_out[9]~DUPLICATE     ;                  ;                       ;
+; HEX_out[15]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; HEX_out[15]~DUPLICATE    ;                  ;                       ;
+; HEX_out[17]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; HEX_out[17]~DUPLICATE    ;                  ;                       ;
+; HEX_out[22]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; HEX_out[22]~DUPLICATE    ;                  ;                       ;
 ; PC_FE[3]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[3]~DUPLICATE       ;                  ;                       ;
 ; PC_FE[4]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[4]~DUPLICATE       ;                  ;                       ;
-; PC_FE[5]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[5]~DUPLICATE       ;                  ;                       ;
-; PC_FE[7]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[7]~DUPLICATE       ;                  ;                       ;
-; PC_FE[8]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[8]~DUPLICATE       ;                  ;                       ;
+; PC_FE[9]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[9]~DUPLICATE       ;                  ;                       ;
 ; PC_FE[10]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[10]~DUPLICATE      ;                  ;                       ;
-; PC_FE[13]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[13]~DUPLICATE      ;                  ;                       ;
+; PC_FE[11]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[11]~DUPLICATE      ;                  ;                       ;
+; PC_FE[12]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[12]~DUPLICATE      ;                  ;                       ;
 ; PC_FE[14]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[14]~DUPLICATE      ;                  ;                       ;
-; PC_ID[0]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_ID[0]~DUPLICATE       ;                  ;                       ;
+; PC_FE[15]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_FE[15]~DUPLICATE      ;                  ;                       ;
+; PC_ID[8]                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PC_ID[8]~DUPLICATE       ;                  ;                       ;
 ; aluout_EX[2]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[2]~DUPLICATE   ;                  ;                       ;
-; aluout_EX[4]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[4]~DUPLICATE   ;                  ;                       ;
-; aluout_EX[7]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[7]~DUPLICATE   ;                  ;                       ;
 ; aluout_EX[8]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[8]~DUPLICATE   ;                  ;                       ;
 ; aluout_EX[12]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[12]~DUPLICATE  ;                  ;                       ;
-; aluout_EX[15]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[15]~DUPLICATE  ;                  ;                       ;
+; aluout_EX[17]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[17]~DUPLICATE  ;                  ;                       ;
+; aluout_EX[18]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[18]~DUPLICATE  ;                  ;                       ;
 ; aluout_EX[19]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[19]~DUPLICATE  ;                  ;                       ;
-; immval_ID[7]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; immval_ID[7]~DUPLICATE   ;                  ;                       ;
-; immval_ID[8]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; immval_ID[8]~DUPLICATE   ;                  ;                       ;
-; inst_FE[3]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; inst_FE[3]~DUPLICATE     ;                  ;                       ;
+; aluout_EX[22]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[22]~DUPLICATE  ;                  ;                       ;
+; aluout_EX[24]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[24]~DUPLICATE  ;                  ;                       ;
+; aluout_EX[25]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[25]~DUPLICATE  ;                  ;                       ;
+; aluout_EX[31]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; aluout_EX[31]~DUPLICATE  ;                  ;                       ;
 ; inst_FE[8]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; inst_FE[8]~DUPLICATE     ;                  ;                       ;
-; inst_FE[9]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; inst_FE[9]~DUPLICATE     ;                  ;                       ;
-; op1_ID[0]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op1_ID[0]~DUPLICATE      ;                  ;                       ;
-; op1_ID[1]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op1_ID[1]~DUPLICATE      ;                  ;                       ;
-; op2_ID[2]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op2_ID[2]~DUPLICATE      ;                  ;                       ;
-; op2_ID[3]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op2_ID[3]~DUPLICATE      ;                  ;                       ;
-; op2_ID[4]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op2_ID[4]~DUPLICATE      ;                  ;                       ;
-; regs[0][2]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[0][2]~DUPLICATE     ;                  ;                       ;
-; regs[0][20]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[0][20]~DUPLICATE    ;                  ;                       ;
-; regs[0][25]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[0][25]~DUPLICATE    ;                  ;                       ;
-; regs[0][27]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[0][27]~DUPLICATE    ;                  ;                       ;
-; regs[0][28]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[0][28]~DUPLICATE    ;                  ;                       ;
-; regs[2][14]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[2][14]~DUPLICATE    ;                  ;                       ;
-; regs[3][14]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[3][14]~DUPLICATE    ;                  ;                       ;
-; regs[3][25]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[3][25]~DUPLICATE    ;                  ;                       ;
-; regs[3][27]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[3][27]~DUPLICATE    ;                  ;                       ;
-; regs[6][8]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[6][8]~DUPLICATE     ;                  ;                       ;
-; regs[6][13]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[6][13]~DUPLICATE    ;                  ;                       ;
-; regs[6][23]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[6][23]~DUPLICATE    ;                  ;                       ;
-; regs[6][29]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[6][29]~DUPLICATE    ;                  ;                       ;
-; regs[8][21]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[8][21]~DUPLICATE    ;                  ;                       ;
-; regs[10][12]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[10][12]~DUPLICATE   ;                  ;                       ;
-; regs[10][20]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[10][20]~DUPLICATE   ;                  ;                       ;
-; regs[10][22]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[10][22]~DUPLICATE   ;                  ;                       ;
-; regs[10][24]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[10][24]~DUPLICATE   ;                  ;                       ;
-; regs[10][25]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[10][25]~DUPLICATE   ;                  ;                       ;
-; regs[10][28]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[10][28]~DUPLICATE   ;                  ;                       ;
-; regs[10][29]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[10][29]~DUPLICATE   ;                  ;                       ;
-; regs[12][13]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[12][13]~DUPLICATE   ;                  ;                       ;
-; regs[12][24]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[12][24]~DUPLICATE   ;                  ;                       ;
+; inst_FE[13]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; inst_FE[13]~DUPLICATE    ;                  ;                       ;
+; inst_FE[22]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; inst_FE[22]~DUPLICATE    ;                  ;                       ;
+; inst_FE[23]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; inst_FE[23]~DUPLICATE    ;                  ;                       ;
+; op1_ID[4]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op1_ID[4]~DUPLICATE      ;                  ;                       ;
+; op2_ID[1]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op2_ID[1]~DUPLICATE      ;                  ;                       ;
+; op2_ID[5]                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; op2_ID[5]~DUPLICATE      ;                  ;                       ;
+; regs[0][7]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regs[0][7]~DUPLICATE     ;                  ;                       ;
+; regval1_ID[1]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval1_ID[1]~DUPLICATE  ;                  ;                       ;
+; regval1_ID[2]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval1_ID[2]~DUPLICATE  ;                  ;                       ;
+; regval1_ID[9]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval1_ID[9]~DUPLICATE  ;                  ;                       ;
+; regval1_ID[12]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval1_ID[12]~DUPLICATE ;                  ;                       ;
+; regval1_ID[13]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval1_ID[13]~DUPLICATE ;                  ;                       ;
+; regval1_ID[15]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval1_ID[15]~DUPLICATE ;                  ;                       ;
+; regval1_ID[16]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval1_ID[16]~DUPLICATE ;                  ;                       ;
 ; regval2_ID[0]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval2_ID[0]~DUPLICATE  ;                  ;                       ;
-; regval2_ID[1]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval2_ID[1]~DUPLICATE  ;                  ;                       ;
 ; regval2_ID[14]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval2_ID[14]~DUPLICATE ;                  ;                       ;
-; regval_MEM[26]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval_MEM[26]~DUPLICATE ;                  ;                       ;
-; wregno_EX[0]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; wregno_EX[0]~DUPLICATE   ;                  ;                       ;
-; wregno_EX[2]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; wregno_EX[2]~DUPLICATE   ;                  ;                       ;
-; wregno_ID[3]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; wregno_ID[3]~DUPLICATE   ;                  ;                       ;
-; wregno_MEM[3]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; wregno_MEM[3]~DUPLICATE  ;                  ;                       ;
+; regval2_ID[17]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval2_ID[17]~DUPLICATE ;                  ;                       ;
+; regval2_ID[22]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval2_ID[22]~DUPLICATE ;                  ;                       ;
+; regval2_ID[23]                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; regval2_ID[23]~DUPLICATE ;                  ;                       ;
+; wregno_MEM[1]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; wregno_MEM[1]~DUPLICATE  ;                  ;                       ;
 +----------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------+------------------+-----------------------+
 
 
@@ -386,8 +374,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 2435 ) ; 0.00 % ( 0 / 2435 )        ; 0.00 % ( 0 / 2435 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 2435 ) ; 0.00 % ( 0 / 2435 )        ; 0.00 % ( 0 / 2435 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 1580 ) ; 0.00 % ( 0 / 1580 )        ; 0.00 % ( 0 / 1580 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1580 ) ; 0.00 % ( 0 / 1580 )        ; 0.00 % ( 0 / 1580 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -410,7 +398,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 2426 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1571 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 9 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -426,41 +414,41 @@ The pin-out file can be found in C:/Users/Usha/Documents/cs3220/project3/cs3220/
 +-------------------------------------------------------------+-----------------------+-------+
 ; Resource                                                    ; Usage                 ; %     ;
 +-------------------------------------------------------------+-----------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 990 / 18,480          ; 5 %   ;
-; ALMs needed [=A-B+C]                                        ; 990                   ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 1,131 / 18,480        ; 6 %   ;
-;         [a] ALMs used for LUT logic and registers           ; 284                   ;       ;
-;         [b] ALMs used for LUT logic                         ; 664                   ;       ;
-;         [c] ALMs used for registers                         ; 183                   ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 549 / 18,480          ; 3 %   ;
+; ALMs needed [=A-B+C]                                        ; 549                   ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 655 / 18,480          ; 4 %   ;
+;         [a] ALMs used for LUT logic and registers           ; 159                   ;       ;
+;         [b] ALMs used for LUT logic                         ; 367                   ;       ;
+;         [c] ALMs used for registers                         ; 129                   ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 158 / 18,480          ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 17 / 18,480           ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 107 / 18,480          ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 18,480            ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                     ;       ;
-;         [b] Due to LAB-wide signal conflicts                ; 1                     ;       ;
-;         [c] Due to LAB input limits                         ; 16                    ;       ;
+;         [b] Due to LAB-wide signal conflicts                ; 0                     ;       ;
+;         [c] Due to LAB input limits                         ; 1                     ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                     ;       ;
 ;                                                             ;                       ;       ;
 ; Difficulty packing design                                   ; Low                   ;       ;
 ;                                                             ;                       ;       ;
-; Total LABs:  partially or completely used                   ; 162 / 1,848           ; 9 %   ;
-;     -- Logic LABs                                           ; 162                   ;       ;
+; Total LABs:  partially or completely used                   ; 83 / 1,848            ; 4 %   ;
+;     -- Logic LABs                                           ; 83                    ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ;       ;
 ;                                                             ;                       ;       ;
-; Combinational ALUT usage for logic                          ; 1,305                 ;       ;
-;     -- 7 input functions                                    ; 8                     ;       ;
-;     -- 6 input functions                                    ; 681                   ;       ;
-;     -- 5 input functions                                    ; 208                   ;       ;
-;     -- 4 input functions                                    ; 129                   ;       ;
-;     -- <=3 input functions                                  ; 279                   ;       ;
-; Combinational ALUT usage for route-throughs                 ; 139                   ;       ;
+; Combinational ALUT usage for logic                          ; 789                   ;       ;
+;     -- 7 input functions                                    ; 17                    ;       ;
+;     -- 6 input functions                                    ; 356                   ;       ;
+;     -- 5 input functions                                    ; 109                   ;       ;
+;     -- 4 input functions                                    ; 118                   ;       ;
+;     -- <=3 input functions                                  ; 189                   ;       ;
+; Combinational ALUT usage for route-throughs                 ; 101                   ;       ;
 ;                                                             ;                       ;       ;
-; Dedicated logic registers                                   ; 1,015                 ;       ;
+; Dedicated logic registers                                   ; 664                   ;       ;
 ;     -- By type:                                             ;                       ;       ;
-;         -- Primary logic registers                          ; 934 / 36,960          ; 3 %   ;
-;         -- Secondary logic registers                        ; 81 / 36,960           ; < 1 % ;
+;         -- Primary logic registers                          ; 575 / 36,960          ; 2 %   ;
+;         -- Secondary logic registers                        ; 89 / 36,960           ; < 1 % ;
 ;     -- By function:                                         ;                       ;       ;
-;         -- Design implementation registers                  ; 958                   ;       ;
-;         -- Routing optimization registers                   ; 57                    ;       ;
+;         -- Design implementation registers                  ; 619                   ;       ;
+;         -- Routing optimization registers                   ; 45                    ;       ;
 ;                                                             ;                       ;       ;
 ; Virtual pins                                                ; 0                     ;       ;
 ; I/O pins                                                    ; 68 / 224              ; 30 %  ;
@@ -487,12 +475,12 @@ The pin-out file can be found in C:/Users/Usha/Documents/cs3220/project3/cs3220/
 ; Oscillator blocks                                           ; 0 / 1                 ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3                 ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 1                 ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 3.6% / 3.8% / 3.0%    ;       ;
-; Peak interconnect usage (total/H/V)                         ; 25.8% / 26.8% / 22.4% ;       ;
-; Maximum fan-out                                             ; 1143                  ;       ;
-; Highest non-global fan-out                                  ; 886                   ;       ;
-; Total fan-out                                               ; 12364                 ;       ;
-; Average fan-out                                             ; 4.64                  ;       ;
+; Average interconnect usage (total/H/V)                      ; 2.5% / 2.7% / 1.9%    ;       ;
+; Peak interconnect usage (total/H/V)                         ; 21.7% / 24.1% / 14.7% ;       ;
+; Maximum fan-out                                             ; 792                   ;       ;
+; Highest non-global fan-out                                  ; 542                   ;       ;
+; Total fan-out                                               ; 8269                  ;       ;
+; Average fan-out                                             ; 4.70                  ;       ;
 +-------------------------------------------------------------+-----------------------+-------+
 
 
@@ -501,44 +489,44 @@ The pin-out file can be found in C:/Users/Usha/Documents/cs3220/project3/cs3220/
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 990 / 18480 ( 5 % )   ; 0 / 18480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 990                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 1131 / 18480 ( 6 % )  ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 284                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 664                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 183                   ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 549 / 18480 ( 3 % )   ; 0 / 18480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 549                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 655 / 18480 ( 4 % )   ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 159                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 367                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 129                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 158 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 17 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 107 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 18480 ( < 1 % )   ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
-;         [b] Due to LAB-wide signal conflicts                ; 1                     ; 0                              ;
-;         [c] Due to LAB input limits                         ; 16                    ; 0                              ;
+;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 1                     ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 162 / 1848 ( 9 % )    ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 162                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 83 / 1848 ( 4 % )     ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 83                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 1305                  ; 0                              ;
-;     -- 7 input functions                                    ; 8                     ; 0                              ;
-;     -- 6 input functions                                    ; 681                   ; 0                              ;
-;     -- 5 input functions                                    ; 208                   ; 0                              ;
-;     -- 4 input functions                                    ; 129                   ; 0                              ;
-;     -- <=3 input functions                                  ; 279                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 139                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 789                   ; 0                              ;
+;     -- 7 input functions                                    ; 17                    ; 0                              ;
+;     -- 6 input functions                                    ; 356                   ; 0                              ;
+;     -- 5 input functions                                    ; 109                   ; 0                              ;
+;     -- 4 input functions                                    ; 118                   ; 0                              ;
+;     -- <=3 input functions                                  ; 189                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 101                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 934 / 36960 ( 3 % )   ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 81 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
+;         -- Primary logic registers                          ; 575 / 36960 ( 2 % )   ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 89 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 958                   ; 0                              ;
-;         -- Routing optimization registers                   ; 57                    ; 0                              ;
+;         -- Design implementation registers                  ; 619                   ; 0                              ;
+;         -- Routing optimization registers                   ; 45                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -554,18 +542,18 @@ The pin-out file can be found in C:/Users/Usha/Documents/cs3220/project3/cs3220/
 ; PLL Reference Clock Select Block                            ; 0 / 4 ( 0 % )         ; 1 / 4 ( 25 % )                 ;
 ;                                                             ;                       ;                                ;
 ; Connections                                                 ;                       ;                                ;
-;     -- Input Connections                                    ; 2029                  ; 0                              ;
-;     -- Registered Input Connections                         ; 1900                  ; 0                              ;
-;     -- Output Connections                                   ; 0                     ; 2029                           ;
+;     -- Input Connections                                    ; 1334                  ; 0                              ;
+;     -- Registered Input Connections                         ; 1205                  ; 0                              ;
+;     -- Output Connections                                   ; 0                     ; 1334                           ;
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 13472                 ; 2063                           ;
-;     -- Registered Connections                               ; 8965                  ; 0                              ;
+;     -- Total Connections                                    ; 9373                  ; 1368                           ;
+;     -- Registered Connections                               ; 6033                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
-;     -- Top                                                  ; 0                     ; 2029                           ;
-;     -- hard_block:auto_generated_inst                       ; 2029                  ; 0                              ;
+;     -- Top                                                  ; 0                     ; 1334                           ;
+;     -- hard_block:auto_generated_inst                       ; 1334                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
 ;     -- Input Ports                                          ; 16                    ; 2                              ;
@@ -1251,9 +1239,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; CLOCK_50 ; Incomplete set of assignments ;
 ; RESET_N  ; Incomplete set of assignments ;
 ; KEY[3]   ; Incomplete set of assignments ;
-; KEY[0]   ; Incomplete set of assignments ;
-; KEY[1]   ; Incomplete set of assignments ;
 ; KEY[2]   ; Incomplete set of assignments ;
+; KEY[1]   ; Incomplete set of assignments ;
+; KEY[0]   ; Incomplete set of assignments ;
 +----------+-------------------------------+
 
 
@@ -1310,19 +1298,19 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node             ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
-; |project3_frame                        ; 990.0 (975.2)        ; 1131.0 (1113.7)                  ; 157.0 (154.4)                                     ; 16.0 (16.0)                      ; 0.0 (0.0)            ; 1305 (1261)         ; 1015 (1014)               ; 0 (0)         ; 524288            ; 64    ; 0          ; 68   ; 0            ; |project3_frame                                                                         ; project3_frame  ; work         ;
+; |project3_frame                        ; 549.0 (534.0)        ; 654.0 (637.0)                    ; 105.5 (103.5)                                     ; 0.5 (0.5)                        ; 0.0 (0.0)            ; 789 (745)           ; 664 (663)                 ; 0 (0)         ; 524288            ; 64    ; 0          ; 68   ; 0            ; |project3_frame                                                                         ; project3_frame  ; work         ;
 ;    |Pll:myPll|                         ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|Pll:myPll                                                               ; Pll             ; Pll          ;
 ;       |Pll_0002:pll_inst|              ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|Pll:myPll|Pll_0002:pll_inst                                             ; Pll_0002        ; Pll          ;
 ;          |altera_pll:altera_pll_i|     ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i                     ; altera_pll      ; work         ;
 ;    |SevenSeg:ss0|                      ; 2.5 (2.5)            ; 2.8 (2.8)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss0                                                            ; SevenSeg        ; work         ;
-;    |SevenSeg:ss1|                      ; 2.5 (2.5)            ; 3.5 (3.5)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss1                                                            ; SevenSeg        ; work         ;
-;    |SevenSeg:ss2|                      ; 2.3 (2.3)            ; 2.3 (2.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss2                                                            ; SevenSeg        ; work         ;
-;    |SevenSeg:ss3|                      ; 2.5 (2.5)            ; 3.0 (3.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss3                                                            ; SevenSeg        ; work         ;
-;    |SevenSeg:ss4|                      ; 2.2 (2.2)            ; 2.3 (2.3)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss4                                                            ; SevenSeg        ; work         ;
-;    |SevenSeg:ss5|                      ; 2.4 (2.4)            ; 2.8 (2.8)                        ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss5                                                            ; SevenSeg        ; work         ;
-;    |altsyncram:dmem_rtl_0|             ; 0.3 (0.0)            ; 0.5 (0.0)                        ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (0)               ; 1 (0)                     ; 0 (0)         ; 524288            ; 64    ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0                                                   ; altsyncram      ; work         ;
-;       |altsyncram_94p1:auto_generated| ; 0.3 (0.3)            ; 0.5 (0.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (0)               ; 1 (1)                     ; 0 (0)         ; 524288            ; 64    ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated                    ; altsyncram_94p1 ; work         ;
-;          |decode_5la:decode2|          ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2 ; decode_5la      ; work         ;
+;    |SevenSeg:ss1|                      ; 2.1 (2.1)            ; 2.4 (2.4)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss1                                                            ; SevenSeg        ; work         ;
+;    |SevenSeg:ss2|                      ; 2.3 (2.3)            ; 2.7 (2.7)                        ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss2                                                            ; SevenSeg        ; work         ;
+;    |SevenSeg:ss3|                      ; 2.5 (2.5)            ; 2.5 (2.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss3                                                            ; SevenSeg        ; work         ;
+;    |SevenSeg:ss4|                      ; 2.4 (2.4)            ; 2.7 (2.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss4                                                            ; SevenSeg        ; work         ;
+;    |SevenSeg:ss5|                      ; 2.5 (2.5)            ; 3.2 (3.2)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss5                                                            ; SevenSeg        ; work         ;
+;    |altsyncram:dmem_rtl_0|             ; 0.8 (0.0)            ; 0.8 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (0)               ; 1 (0)                     ; 0 (0)         ; 524288            ; 64    ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0                                                   ; altsyncram      ; work         ;
+;       |altsyncram_94p1:auto_generated| ; 0.8 (0.3)            ; 0.8 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (0)               ; 1 (1)                     ; 0 (0)         ; 524288            ; 64    ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated                    ; altsyncram_94p1 ; work         ;
+;          |decode_5la:decode2|          ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2 ; decode_5la      ; work         ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1397,9 +1385,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLOCK_50 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; RESET_N  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[3]   ; Input    ; -- ; (7)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[0]   ; Input    ; -- ; (7)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[1]   ; Input    ; -- ; --   ; (7)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[2]   ; Input    ; -- ; (7)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[1]   ; Input    ; -- ; --   ; (7)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[0]   ; Input    ; -- ; --   ; (7)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1423,12 +1411,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL ; 1                 ; 0       ;
 ; KEY[3]                                                                                    ;                   ;         ;
 ;      - rd_val_MEM_w[3]~2                                                                  ; 0                 ; 7       ;
-; KEY[0]                                                                                    ;                   ;         ;
-;      - rd_val_MEM_w[0]~61                                                                 ; 0                 ; 7       ;
+; KEY[2]                                                                                    ;                   ;         ;
+;      - rd_val_MEM_w[2]~61                                                                 ; 0                 ; 7       ;
 ; KEY[1]                                                                                    ;                   ;         ;
 ;      - rd_val_MEM_w[1]~64                                                                 ; 1                 ; 7       ;
-; KEY[2]                                                                                    ;                   ;         ;
-;      - rd_val_MEM_w[2]~67                                                                 ; 0                 ; 7       ;
+; KEY[0]                                                                                    ;                   ;         ;
+;      - rd_val_MEM_w[0]~67                                                                 ; 1                 ; 7       ;
 +-------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1437,37 +1425,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------+---------------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                               ; Location                  ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------------------------+---------------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; Decoder1~0                                                                         ; LABCELL_X20_Y8_N3         ; 37      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~1                                                                         ; LABCELL_X20_Y8_N6         ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~10                                                                        ; LABCELL_X20_Y8_N48        ; 39      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~11                                                                        ; LABCELL_X20_Y8_N36        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~12                                                                        ; LABCELL_X20_Y8_N39        ; 34      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~13                                                                        ; LABCELL_X20_Y8_N12        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~14                                                                        ; LABCELL_X20_Y8_N18        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~15                                                                        ; LABCELL_X20_Y8_N21        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~2                                                                         ; LABCELL_X20_Y8_N45        ; 33      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~3                                                                         ; LABCELL_X20_Y8_N51        ; 35      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~4                                                                         ; LABCELL_X20_Y8_N57        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~5                                                                         ; LABCELL_X20_Y8_N54        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~6                                                                         ; LABCELL_X20_Y8_N0         ; 36      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~7                                                                         ; LABCELL_X20_Y8_N9         ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~8                                                                         ; LABCELL_X20_Y8_N15        ; 33      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Decoder1~9                                                                         ; LABCELL_X20_Y8_N42        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|locked_wire[0]                 ; FRACTIONALPLL_X0_Y1_N0    ; 886     ; Async. clear                          ; no     ; --                   ; --               ; --                        ;
-; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]                 ; PLLOUTPUTCOUNTER_X0_Y0_N1 ; 1079    ; Clock                                 ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2|eq_node[0] ; LABCELL_X36_Y7_N39        ; 32      ; Clock enable, Write enable            ; no     ; --                   ; --               ; --                        ;
-; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2|eq_node[1] ; LABCELL_X36_Y7_N33        ; 32      ; Clock enable, Write enable            ; no     ; --                   ; --               ; --                        ;
-; aluout_EX[22]~7                                                                    ; LABCELL_X29_Y10_N36       ; 13      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; aluout_EX_r[15]~216                                                                ; LABCELL_X31_Y9_N15        ; 68      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; always10~1                                                                         ; LABCELL_X31_Y4_N18        ; 10      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; always2~0                                                                          ; LABCELL_X17_Y9_N36        ; 105     ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; always9~1                                                                          ; LABCELL_X31_Y4_N21        ; 24      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; ctrlsig_EX[2]                                                                      ; FF_X32_Y4_N11             ; 33      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; ctrlsig_ID[4]                                                                      ; FF_X19_Y10_N53            ; 16      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; dmem~44                                                                            ; LABCELL_X31_Y4_N51        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; immval_ID[2]~0                                                                     ; LABCELL_X17_Y9_N12        ; 18      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; inst_FE[5]~0                                                                       ; LABCELL_X17_Y9_N51        ; 53      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; mispred_EX                                                                         ; FF_X19_Y12_N23            ; 63      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; Decoder2~0                                                                         ; LABCELL_X32_Y3_N54        ; 33      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Decoder2~1                                                                         ; LABCELL_X32_Y3_N57        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Decoder2~2                                                                         ; LABCELL_X32_Y3_N21        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Decoder2~3                                                                         ; LABCELL_X32_Y3_N18        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Decoder2~4                                                                         ; LABCELL_X32_Y3_N48        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Decoder2~5                                                                         ; LABCELL_X32_Y3_N51        ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|locked_wire[0]                 ; FRACTIONALPLL_X0_Y1_N0    ; 542     ; Async. clear                          ; no     ; --                   ; --               ; --                        ;
+; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]                 ; PLLOUTPUTCOUNTER_X0_Y0_N1 ; 728     ; Clock                                 ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2|eq_node[0] ; MLABCELL_X34_Y8_N48       ; 32      ; Clock enable, Write enable            ; no     ; --                   ; --               ; --                        ;
+; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2|eq_node[1] ; MLABCELL_X34_Y8_N51       ; 32      ; Clock enable, Write enable            ; no     ; --                   ; --               ; --                        ;
+; aluout_EX[18]~6                                                                    ; LABCELL_X32_Y2_N51        ; 18      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; aluout_EX_r[15]~138                                                                ; LABCELL_X29_Y6_N36        ; 67      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; always10~1                                                                         ; MLABCELL_X28_Y7_N21       ; 10      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; always2~0                                                                          ; LABCELL_X32_Y2_N54        ; 109     ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; always9~1                                                                          ; MLABCELL_X28_Y7_N18       ; 29      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; ctrlsig_EX[2]                                                                      ; FF_X34_Y7_N53             ; 32      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; dmem~43                                                                            ; MLABCELL_X28_Y7_N42       ; 32      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; immval_ID[2]~0                                                                     ; LABCELL_X32_Y2_N27        ; 11      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; inst_FE[23]~0                                                                      ; LABCELL_X32_Y2_N57        ; 44      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; mispred_EX                                                                         ; FF_X34_Y2_N26             ; 51      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------------------------------+---------------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1476,7 +1453,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------+---------------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                               ; Location                  ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------+---------------------------+---------+----------------------+------------------+---------------------------+
-; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y0_N1 ; 1079    ; Global Clock         ; GCLK3            ; --                        ;
+; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y0_N1 ; 728     ; Global Clock         ; GCLK3            ; --                        ;
 +--------------------------------------------------------------------+---------------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1485,17 +1462,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------+---------+
 ; Name                                                               ; Fan-Out ;
 +--------------------------------------------------------------------+---------+
-; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|locked_wire[0] ; 886     ;
+; Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|locked_wire[0] ; 542     ;
 +--------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; Name                                                            ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size   ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF                                                    ; Location                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
-+-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 16384        ; 32           ; 16384        ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 524288 ; 16384                       ; 32                          ; 16384                       ; 32                          ; 524288              ; 64          ; 0     ; db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif ; M10K_X30_Y10_N0, M10K_X30_Y4_N0, M10K_X22_Y11_N0, M10K_X11_Y9_N0, M10K_X30_Y1_N0, M10K_X22_Y1_N0, M10K_X38_Y10_N0, M10K_X46_Y8_N0, M10K_X38_Y5_N0, M10K_X38_Y6_N0, M10K_X46_Y1_N0, M10K_X38_Y1_N0, M10K_X11_Y10_N0, M10K_X11_Y8_N0, M10K_X11_Y6_N0, M10K_X11_Y4_N0, M10K_X3_Y6_N0, M10K_X30_Y12_N0, M10K_X11_Y11_N0, M10K_X11_Y2_N0, M10K_X22_Y12_N0, M10K_X22_Y10_N0, M10K_X11_Y5_N0, M10K_X22_Y5_N0, M10K_X51_Y4_N0, M10K_X51_Y6_N0, M10K_X3_Y5_N0, M10K_X11_Y7_N0, M10K_X51_Y5_N0, M10K_X46_Y5_N0, M10K_X38_Y9_N0, M10K_X38_Y8_N0, M10K_X22_Y3_N0, M10K_X22_Y2_N0, M10K_X46_Y7_N0, M10K_X38_Y7_N0, M10K_X51_Y7_N0, M10K_X46_Y10_N0, M10K_X22_Y7_N0, M10K_X22_Y8_N0, M10K_X30_Y11_N0, M10K_X30_Y9_N0, M10K_X46_Y9_N0, M10K_X46_Y4_N0, M10K_X38_Y3_N0, M10K_X38_Y2_N0, M10K_X46_Y2_N0, M10K_X30_Y2_N0, M10K_X30_Y6_N0, M10K_X30_Y7_N0, M10K_X38_Y11_N0, M10K_X38_Y4_N0, M10K_X22_Y9_N0, M10K_X46_Y6_N0, M10K_X30_Y5_N0, M10K_X46_Y3_N0, M10K_X51_Y3_N0, M10K_X51_Y2_N0, M10K_X30_Y8_N0, M10K_X30_Y3_N0, M10K_X22_Y6_N0, M10K_X51_Y9_N0, M10K_X22_Y4_N0, M10K_X51_Y8_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
-+-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
+; Name                                                            ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size   ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF                                                    ; Location                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
++-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
+; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 16384        ; 32           ; 16384        ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 524288 ; 16384                       ; 32                          ; 16384                       ; 32                          ; 524288              ; 64          ; 0     ; db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif ; M10K_X11_Y12_N0, M10K_X11_Y5_N0, M10K_X46_Y4_N0, M10K_X46_Y6_N0, M10K_X38_Y3_N0, M10K_X30_Y3_N0, M10K_X46_Y12_N0, M10K_X46_Y10_N0, M10K_X30_Y9_N0, M10K_X11_Y11_N0, M10K_X11_Y10_N0, M10K_X22_Y11_N0, M10K_X46_Y3_N0, M10K_X38_Y5_N0, M10K_X38_Y10_N0, M10K_X30_Y8_N0, M10K_X30_Y10_N0, M10K_X30_Y12_N0, M10K_X38_Y6_N0, M10K_X11_Y9_N0, M10K_X22_Y4_N0, M10K_X22_Y6_N0, M10K_X38_Y8_N0, M10K_X38_Y9_N0, M10K_X38_Y11_N0, M10K_X22_Y12_N0, M10K_X46_Y9_N0, M10K_X46_Y8_N0, M10K_X30_Y15_N0, M10K_X46_Y2_N0, M10K_X22_Y2_N0, M10K_X30_Y2_N0, M10K_X11_Y3_N0, M10K_X3_Y4_N0, M10K_X22_Y8_N0, M10K_X22_Y9_N0, M10K_X11_Y7_N0, M10K_X22_Y10_N0, M10K_X11_Y2_N0, M10K_X11_Y4_N0, M10K_X38_Y14_N0, M10K_X30_Y14_N0, M10K_X30_Y6_N0, M10K_X11_Y6_N0, M10K_X46_Y13_N0, M10K_X38_Y13_N0, M10K_X30_Y4_N0, M10K_X30_Y5_N0, M10K_X46_Y11_N0, M10K_X38_Y12_N0, M10K_X30_Y7_N0, M10K_X30_Y11_N0, M10K_X3_Y7_N0, M10K_X3_Y8_N0, M10K_X22_Y3_N0, M10K_X38_Y2_N0, M10K_X38_Y7_N0, M10K_X46_Y7_N0, M10K_X30_Y13_N0, M10K_X22_Y13_N0, M10K_X38_Y4_N0, M10K_X11_Y8_N0, M10K_X22_Y7_N0, M10K_X22_Y5_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
++-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
@@ -1504,21 +1481,21 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 5,722 / 140,056 ( 4 % ) ;
-; C12 interconnects            ; 41 / 6,048 ( < 1 % )    ;
-; C2 interconnects             ; 1,892 / 54,648 ( 3 % )  ;
-; C4 interconnects             ; 901 / 25,920 ( 3 % )    ;
+; Block interconnects          ; 3,917 / 140,056 ( 3 % ) ;
+; C12 interconnects            ; 43 / 6,048 ( < 1 % )    ;
+; C2 interconnects             ; 1,166 / 54,648 ( 2 % )  ;
+; C4 interconnects             ; 598 / 25,920 ( 2 % )    ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 195 / 140,056 ( < 1 % ) ;
+; Direct links                 ; 126 / 140,056 ( < 1 % ) ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 511 / 36,960 ( 1 % )    ;
+; Local interconnects          ; 368 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 187 / 5,984 ( 3 % )     ;
-; R14/C12 interconnect drivers ; 187 / 9,504 ( 2 % )     ;
-; R3 interconnects             ; 2,472 / 60,192 ( 4 % )  ;
-; R6 interconnects             ; 4,196 / 127,072 ( 3 % ) ;
+; R14 interconnects            ; 137 / 5,984 ( 2 % )     ;
+; R14/C12 interconnect drivers ; 128 / 9,504 ( 1 % )     ;
+; R3 interconnects             ; 1,633 / 60,192 ( 3 % )  ;
+; R6 interconnects             ; 2,781 / 127,072 ( 2 % ) ;
 ; Spine clocks                 ; 2 / 120 ( 2 % )         ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1648,9 +1625,9 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; RESET_N            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; KEY[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -1702,118 +1679,118 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                                       ; Destination Clock(s)                                                  ; Delay Added in ns ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
-; myPll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; myPll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 36.2              ;
+; myPll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; myPll|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 39.5              ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                     ;
-+-----------------------+---------------------------------------------------------------------------------------+-------------------+
-; Source Register       ; Destination Register                                                                  ; Delay Added in ns ;
-+-----------------------+---------------------------------------------------------------------------------------+-------------------+
-; op2_ID[3]             ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.994             ;
-; op2_ID[2]             ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.911             ;
-; aluout_EX[7]          ; regval_MEM[11]                                                                        ; 0.661             ;
-; aluout_EX[5]          ; regval_MEM[11]                                                                        ; 0.537             ;
-; regval2_ID[31]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[19]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[30]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[16]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[28]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[15]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[13]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[14]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[27]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[11]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[12]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[26]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[25]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[24]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[10]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[10]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[23]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[7]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[8]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[9]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[9]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[21]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[6]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[6]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[20]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[5]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[5]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[18]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[22]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[4]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[4]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[17]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[2]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[2]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[3]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[3]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; op2_ID[1]             ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; op2_ID[0]             ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[1]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[1]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[0]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[8]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval2_ID[29]        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; op2_ID[4]             ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; op2_ID[5]             ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[0]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; regval1_ID[7]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a39~portb_address_reg0 ; 0.535             ;
-; aluout_EX[10]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a53~porta_address_reg0 ; 0.483             ;
-; aluout_EX[6]          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a27~porta_address_reg0 ; 0.480             ;
-; dmem_rtl_0_bypass[58] ; regval_MEM[14]                                                                        ; 0.374             ;
-; dmem_rtl_0_bypass[70] ; regval_MEM[20]                                                                        ; 0.370             ;
-; dmem_rtl_0_bypass[82] ; regval_MEM[26]                                                                        ; 0.370             ;
-; dmem_rtl_0_bypass[62] ; regval_MEM[16]                                                                        ; 0.370             ;
-; dmem_rtl_0_bypass[92] ; regval_MEM[31]                                                                        ; 0.370             ;
-; dmem_rtl_0_bypass[86] ; regval_MEM[28]                                                                        ; 0.370             ;
-; dmem_rtl_0_bypass[40] ; regval_MEM[5]                                                                         ; 0.367             ;
-; dmem_rtl_0_bypass[78] ; regval_MEM[24]                                                                        ; 0.367             ;
-; dmem_rtl_0_bypass[50] ; regval_MEM[10]                                                                        ; 0.367             ;
-; dmem_rtl_0_bypass[80] ; regval_MEM[25]                                                                        ; 0.367             ;
-; dmem_rtl_0_bypass[74] ; regval_MEM[22]                                                                        ; 0.366             ;
-; dmem_rtl_0_bypass[48] ; regval_MEM[9]                                                                         ; 0.366             ;
-; regval2_EX[22]        ; HEX_out[22]                                                                           ; 0.365             ;
-; dmem_rtl_0_bypass[76] ; regval_MEM[23]                                                                        ; 0.363             ;
-; dmem_rtl_0_bypass[68] ; regval_MEM[19]                                                                        ; 0.358             ;
-; regval2_EX[21]        ; HEX_out[21]                                                                           ; 0.336             ;
-; regval2_EX[23]        ; HEX_out[23]                                                                           ; 0.334             ;
-; dmem_rtl_0_bypass[38] ; regval_MEM[4]                                                                         ; 0.314             ;
-; aluout_EX[3]          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a62~porta_address_reg0 ; 0.311             ;
-; aluout_EX[11]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a53~porta_address_reg0 ; 0.298             ;
-; aluout_EX[12]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.294             ;
-; aluout_EX[14]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a27~porta_address_reg0 ; 0.286             ;
-; dmem_rtl_0_bypass[90] ; regval_MEM[30]                                                                        ; 0.274             ;
-; aluout_EX[4]          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a50~porta_address_reg0 ; 0.270             ;
-; aluout_EX[9]          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a53~porta_address_reg0 ; 0.263             ;
-; aluout_EX[8]          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a62~porta_address_reg0 ; 0.261             ;
-; dmem_rtl_0_bypass[63] ; regval_MEM[17]                                                                        ; 0.258             ;
-; dmem_rtl_0_bypass[39] ; regval_MEM[5]                                                                         ; 0.258             ;
-; dmem_rtl_0_bypass[54] ; regval_MEM[12]                                                                        ; 0.258             ;
-; dmem_rtl_0_bypass[61] ; regval_MEM[16]                                                                        ; 0.258             ;
-; dmem_rtl_0_bypass[81] ; regval_MEM[26]                                                                        ; 0.254             ;
-; dmem_rtl_0_bypass[83] ; regval_MEM[27]                                                                        ; 0.254             ;
-; dmem_rtl_0_bypass[44] ; regval_MEM[7]                                                                         ; 0.253             ;
-; dmem_rtl_0_bypass[79] ; regval_MEM[25]                                                                        ; 0.252             ;
-; dmem_rtl_0_bypass[85] ; regval_MEM[28]                                                                        ; 0.252             ;
-; dmem_rtl_0_bypass[37] ; regval_MEM[4]                                                                         ; 0.251             ;
-; dmem_rtl_0_bypass[71] ; regval_MEM[21]                                                                        ; 0.251             ;
-; aluout_EX[13]         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.243             ;
-; dmem_rtl_0_bypass[67] ; regval_MEM[19]                                                                        ; 0.236             ;
-; aluout_EX[2]          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a53~porta_address_reg0 ; 0.224             ;
-; PC_FE[8]              ; PC_ID[8]                                                                              ; 0.214             ;
-; aluout_EX[19]         ; regval_MEM[11]                                                                        ; 0.181             ;
-; aluout_EX[30]         ; regval_MEM[11]                                                                        ; 0.181             ;
-; aluout_EX[31]         ; regval_MEM[11]                                                                        ; 0.181             ;
-; aluout_EX[16]         ; regval_MEM[11]                                                                        ; 0.181             ;
-; aluout_EX[28]         ; regval_MEM[11]                                                                        ; 0.181             ;
-; aluout_EX[15]         ; regval_MEM[11]                                                                        ; 0.181             ;
-+-----------------------+---------------------------------------------------------------------------------------+-------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                     ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                       ; Destination Register                                                                  ; Delay Added in ns ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+-------------------+
+; aluout_EX[13]                                                                         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a57~porta_address_reg0 ; 0.484             ;
+; aluout_EX[4]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a55~porta_address_reg0 ; 0.481             ;
+; aluout_EX[12]                                                                         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a57~porta_address_reg0 ; 0.479             ;
+; regval2_EX[19]                                                                        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a51~porta_datain_reg0  ; 0.379             ;
+; regval2_EX[18]                                                                        ; HEX_out[18]                                                                           ; 0.361             ;
+; regval2_EX[17]                                                                        ; HEX_out[17]                                                                           ; 0.354             ;
+; aluout_EX[2]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a32~porta_address_reg0 ; 0.303             ;
+; dmem_rtl_0_bypass[44]                                                                 ; regval_MEM[7]                                                                         ; 0.278             ;
+; dmem_rtl_0_bypass[48]                                                                 ; regval_MEM[9]                                                                         ; 0.278             ;
+; dmem_rtl_0_bypass[90]                                                                 ; regval_MEM[30]                                                                        ; 0.278             ;
+; dmem_rtl_0_bypass[84]                                                                 ; regval_MEM[27]                                                                        ; 0.278             ;
+; dmem_rtl_0_bypass[42]                                                                 ; regval_MEM[6]                                                                         ; 0.277             ;
+; dmem_rtl_0_bypass[60]                                                                 ; regval_MEM[15]                                                                        ; 0.277             ;
+; dmem_rtl_0_bypass[68]                                                                 ; regval_MEM[19]                                                                        ; 0.275             ;
+; dmem_rtl_0_bypass[64]                                                                 ; regval_MEM[17]                                                                        ; 0.275             ;
+; dmem_rtl_0_bypass[62]                                                                 ; regval_MEM[16]                                                                        ; 0.275             ;
+; dmem_rtl_0_bypass[72]                                                                 ; regval_MEM[21]                                                                        ; 0.273             ;
+; dmem_rtl_0_bypass[88]                                                                 ; regval_MEM[29]                                                                        ; 0.273             ;
+; dmem_rtl_0_bypass[50]                                                                 ; regval_MEM[10]                                                                        ; 0.273             ;
+; dmem_rtl_0_bypass[80]                                                                 ; regval_MEM[25]                                                                        ; 0.273             ;
+; dmem_rtl_0_bypass[58]                                                                 ; regval_MEM[14]                                                                        ; 0.273             ;
+; dmem_rtl_0_bypass[92]                                                                 ; regval_MEM[31]                                                                        ; 0.272             ;
+; dmem_rtl_0_bypass[86]                                                                 ; regval_MEM[28]                                                                        ; 0.272             ;
+; dmem_rtl_0_bypass[38]                                                                 ; regval_MEM[4]                                                                         ; 0.270             ;
+; dmem_rtl_0_bypass[66]                                                                 ; regval_MEM[18]                                                                        ; 0.269             ;
+; dmem_rtl_0_bypass[78]                                                                 ; regval_MEM[24]                                                                        ; 0.269             ;
+; dmem_rtl_0_bypass[74]                                                                 ; regval_MEM[22]                                                                        ; 0.268             ;
+; dmem_rtl_0_bypass[54]                                                                 ; regval_MEM[12]                                                                        ; 0.268             ;
+; dmem_rtl_0_bypass[70]                                                                 ; regval_MEM[20]                                                                        ; 0.267             ;
+; aluout_EX[9]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a25~porta_address_reg0 ; 0.263             ;
+; PC_FE[13]                                                                             ; inst_FE[14]                                                                           ; 0.258             ;
+; aluout_EX[14]                                                                         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a57~porta_address_reg0 ; 0.243             ;
+; aluout_EX[3]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a32~porta_address_reg0 ; 0.243             ;
+; dmem_rtl_0_bypass[36]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[23]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[24]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[25]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[26]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[27]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[28]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[17]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[18]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[19]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[20]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[21]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[22]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[11]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[12]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[13]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[14]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[15]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[16]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[0]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[1]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[2]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[3]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[4]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[5]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[6]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[7]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[8]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[9]                                                                  ; regval_MEM[3]                                                                         ; 0.242             ;
+; dmem_rtl_0_bypass[10]                                                                 ; regval_MEM[3]                                                                         ; 0.242             ;
+; aluout_EX[11]                                                                         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a32~porta_address_reg0 ; 0.224             ;
+; aluout_EX[7]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a55~porta_address_reg0 ; 0.215             ;
+; PC_FE[10]                                                                             ; inst_FE[14]                                                                           ; 0.209             ;
+; aluout_EX[5]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a55~porta_address_reg0 ; 0.209             ;
+; aluout_EX[6]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a51~porta_address_reg0 ; 0.205             ;
+; PC_FE[15]                                                                             ; inst_FE[14]                                                                           ; 0.203             ;
+; regval2_EX[20]                                                                        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a20~porta_datain_reg0  ; 0.196             ;
+; aluout_EX[10]                                                                         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a32~porta_address_reg0 ; 0.195             ;
+; regval2_EX[22]                                                                        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a54~porta_datain_reg0  ; 0.186             ;
+; aluout_EX[8]                                                                          ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a32~porta_address_reg0 ; 0.183             ;
+; PC_FE[8]                                                                              ; inst_FE[19]                                                                           ; 0.175             ;
+; regval2_EX[8]                                                                         ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a40~porta_datain_reg0  ; 0.172             ;
+; dmem~30                                                                               ; regval_MEM[29]                                                                        ; 0.169             ;
+; PC_FE[14]                                                                             ; inst_FE[14]                                                                           ; 0.167             ;
+; PC_FE[11]                                                                             ; inst_FE[14]                                                                           ; 0.167             ;
+; PC_FE[9]                                                                              ; inst_FE[14]                                                                           ; 0.167             ;
+; PC_FE[7]                                                                              ; inst_FE[14]                                                                           ; 0.167             ;
+; PC_FE[6]                                                                              ; inst_FE[14]                                                                           ; 0.167             ;
+; PC_FE[12]                                                                             ; inst_FE[14]                                                                           ; 0.167             ;
+; dmem_rtl_0_bypass[40]                                                                 ; regval_MEM[5]                                                                         ; 0.161             ;
+; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a61~portb_address_reg0 ; regval_MEM[29]                                                                        ; 0.154             ;
+; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a29~portb_address_reg0 ; regval_MEM[29]                                                                        ; 0.154             ;
+; dmem~0                                                                                ; regval_MEM[29]                                                                        ; 0.154             ;
+; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|address_reg_b[0]                 ; regval_MEM[29]                                                                        ; 0.154             ;
+; dmem_rtl_0_bypass[76]                                                                 ; regval_MEM[23]                                                                        ; 0.145             ;
+; inst_FE[19]                                                                           ; pctarget_EX[14]                                                                       ; 0.140             ;
+; ctrlsig_ID[4]                                                                         ; pctarget_EX[14]                                                                       ; 0.128             ;
+; regval2_EX[14]                                                                        ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ram_block1a14~porta_datain_reg0  ; 0.112             ;
+; dmem_rtl_0_bypass[81]                                                                 ; regval_MEM[26]                                                                        ; 0.108             ;
+; inst_FE[14]                                                                           ; pctarget_EX[14]                                                                       ; 0.108             ;
+; dmem_rtl_0_bypass[41]                                                                 ; regval_MEM[6]                                                                         ; 0.107             ;
+; dmem_rtl_0_bypass[57]                                                                 ; regval_MEM[14]                                                                        ; 0.107             ;
+; dmem_rtl_0_bypass[31]                                                                 ; regval_MEM[1]                                                                         ; 0.105             ;
+; dmem_rtl_0_bypass[55]                                                                 ; regval_MEM[13]                                                                        ; 0.105             ;
+; dmem_rtl_0_bypass[63]                                                                 ; regval_MEM[17]                                                                        ; 0.104             ;
+; dmem_rtl_0_bypass[73]                                                                 ; regval_MEM[22]                                                                        ; 0.102             ;
+; dmem_rtl_0_bypass[61]                                                                 ; regval_MEM[16]                                                                        ; 0.102             ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
@@ -1831,7 +1808,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Info (184020): Starting Fitter periphery placement operations
 Info (11178): Promoted 1 clock (1 global)
-    Info (11162): Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 1086 fanout uses global clock CLKCTRL_G3
+    Info (11162): Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 747 fanout uses global clock CLKCTRL_G3
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (332104): Reading SDC File: 'project3.sdc'
 Info (332110): Deriving PLL clocks
@@ -1993,33 +1970,33 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:09
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 3% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 24% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
+Info (170195): Router estimated average interconnect usage is 2% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 20% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 4.33 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 3.69 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:12
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:10
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/output_files/project3_frame.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 144 warnings
-    Info: Peak virtual memory: 6363 megabytes
-    Info: Processing ended: Tue Feb 25 14:16:57 2020
-    Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:02:20
+    Info: Peak virtual memory: 6294 megabytes
+    Info: Processing ended: Wed Feb 26 19:11:03 2020
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:01:36
 
 
 +----------------------------+

@@ -27,7 +27,7 @@
   // **[PRJ3-Part2] TODO:Change this to "fmedian2.mif" before submitting
   // [NOTICE] please note that both ime and dmem use the SAME "IDMEMINITFILE".
   //parameter IDMEMINITFILE = "tests/test5.mif";
-  parameter IDMEMINITFILE = "tests/fmedian2.mif";
+  parameter IDMEMINITFILE = "fmedian2.mif";
 
  
   
@@ -119,8 +119,10 @@
   // during simulation using Model-Sim
   // please remove this part before submitting
   initial begin
-    $readmemh("tests/fmedian2.hex", imem);
-  	 $readmemh("tests/fmedian2.hex", dmem);
+    $readmemh("fmedian2.hex", imem);
+  	 $readmemh("fmedian2.hex", dmem);
+	 //$readmemh("tests/test5.hex", imem);
+  	 //$readmemh("tests/test5.hex", dmem);
   end
     
   assign inst_FE_w = imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]];
@@ -146,7 +148,7 @@
     else begin
       // **TODO: Specify FE latches considering data dependency and branch instruction
 		// ...
-		if (mispred_EX)
+		if (mispred_EX === 1)
 			inst_FE <= NOP;
 		else if (stall_pipe === 1)
 			inst_FE <= inst_FE;
@@ -250,7 +252,7 @@
       regval2_ID  <= {DBITS{1'b0}};
       wregno_ID	 <= {REGNOBITS{1'b0}};
       ctrlsig_ID <= 5'h0;
-    end else if (stall_pipe || mispred_EX) begin
+    end else if (stall_pipe === 1 || mispred_EX === 1) begin
 		PC_ID	 <= {DBITS{1'b0}};
 		inst_ID	 <= {INSTBITS{1'b0}};
       op1_ID	 <= {OP1BITS{1'b0}};
@@ -350,9 +352,9 @@
   //assign mispred_EX_w = ... ;
   //assign pctarget_EX_w = ... ;
   
-	assign mispred_EX_w = is_br_EX_w || is_jmp_EX_w ? 1 : 0;
-	assign pctarget_EX_w = is_br_EX_w ? (PC_ID + sxt_imm_ID_w << 2) :
-								  is_jmp_EX_w ? (regval1_ID + sxt_imm_ID_w << 2) : PC_ID + 4;
+	assign mispred_EX_w = (is_br_EX_w || is_jmp_EX_w) ? 1 : 0;
+	assign pctarget_EX_w = (is_br_EX_w && br_cond_EX) ? (PC_ID + sxt_imm_ID_w << 2) :
+								  is_jmp_EX_w ? (regval1_ID + sxt_imm_ID_w << 2) : PC_ID;
 	
 	
   // EX_latch
