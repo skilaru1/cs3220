@@ -26,8 +26,8 @@
 
   // **[PRJ3-Part2] TODO:Change this to "fmedian2.mif" before submitting
   // [NOTICE] please note that both ime and dmem use the SAME "IDMEMINITFILE".
-  //parameter IDMEMINITFILE = "tests/test5.mif";
-  parameter IDMEMINITFILE = "fmedian2.mif";
+  parameter IDMEMINITFILE = "tests/fmedian.mif";
+  //parameter IDMEMINITFILE = "tests/fmedian2.mif";
 
  
   
@@ -101,6 +101,9 @@
   // So, now we just used these variable as control signals for branch and jump instruction case.
   wire mispred_EX_w;
   reg mispred_EX;
+  reg mispred_ID;
+  wire mispred_ID_w;
+  wire [DBITS-1:0] pctarget_EX_w;
   
   reg [DBITS-1:0] pctarget_EX;
   
@@ -119,19 +122,19 @@
   // during simulation using Model-Sim
   // please remove this part before submitting
   initial begin
-    $readmemh("fmedian2.hex", imem);
-  	 $readmemh("fmedian2.hex", dmem);
-	 //$readmemh("tests/test5.hex", imem);
-  	 //$readmemh("tests/test5.hex", dmem);
+    //$readmemh("tests/fmedian2.hex", imem);
+  	 //$readmemh("tests/fmedian2.hex", dmem);
+	$readmemh("tests/fmedian2.hex", imem);
+	$readmemh("tests/fmedian2.hex", dmem);
   end
     
-  assign inst_FE_w = imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]];
+  assign inst_FE_w = (mispred_ID_w ? NOP : imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]]);
   
   always @ (posedge clk or posedge reset) begin
     if(reset)
       PC_FE <= STARTPC;
-    else if(mispred_EX)
-      PC_FE <= pctarget_EX;		
+    else if(mispred_EX_w)
+      PC_FE <= pctarget_EX_w;
     else if(!stall_pipe)
       PC_FE <= pcplus_FE;
     else 
@@ -148,9 +151,9 @@
     else begin
       // **TODO: Specify FE latches considering data dependency and branch instruction
 		// ...
-		if (mispred_EX === 1)
+		if (mispred_EX_w)
 			inst_FE <= NOP;
-		else if (stall_pipe === 1)
+		else if (stall_pipe)
 			inst_FE <= inst_FE;
 		else
 			inst_FE <= inst_FE_w;
@@ -193,9 +196,13 @@
   reg [REGNOBITS-1:0] wregno_EX;
   reg [REGNOBITS-1:0] wregno_MEM;
   reg [INSTBITS-1:0] inst_ID;
+  
+  // Debug
+  wire [DBITS-1:0] inst_ID_w;
+  assign inst_ID_w = inst_FE;
 
   // ** TODO: Specify signals such as op{1,2}_ID_w, imm_ID_w, r{d,s,t}_ID_w
-  assign op1_ID_w = inst_FE[31:26];
+   assign op1_ID_w = inst_FE[31:26];
   // ...
 	assign op2_ID_w = inst_FE[25:18];
 	assign imm_ID_w = inst_FE[23:8];
@@ -222,7 +229,7 @@
   assign wr_reg_ID_w = (op1_ID_w != OP1_SW && !(op1_ID_w >= OP1_BEQ && op1_ID_w <= OP1_BNE)) ? 1 : 0;
   
   assign ctrlsig_ID_w = {is_br_ID_w, is_jmp_ID_w, rd_mem_ID_w, wr_mem_ID_w, wr_reg_ID_w};
-  
+  assign mispred_ID_w = is_br_ID_w || is_jmp_ID_w;
  
   // TODO: Specify stall condition
   // assign stall_pipe = ... ;
@@ -234,7 +241,7 @@
 							 ((rd_mem_ID_w) && rs) ||
 							 ((is_jmp_ID_w) && rs) ||
 							 ((wr_mem_ID_w) && (rs || rt)) ||
-							 ((inst_FE[31]) && rs); 
+							 ((inst_FE[31]) && rs); //Immediates
 							 
   assign wregno_ID_w = (op1_ID_w == 6'b0) ? rd_ID_w : (!is_br_ID_w && !wr_mem_ID_w) ? rt_ID_w : 4'b0;
 	
@@ -252,7 +259,7 @@
       regval2_ID  <= {DBITS{1'b0}};
       wregno_ID	 <= {REGNOBITS{1'b0}};
       ctrlsig_ID <= 5'h0;
-    end else if (stall_pipe === 1 || mispred_EX === 1) begin
+    end else if (stall_pipe) begin
 		PC_ID	 <= {DBITS{1'b0}};
 		inst_ID	 <= {INSTBITS{1'b0}};
       op1_ID	 <= {OP1BITS{1'b0}};
@@ -261,11 +268,15 @@
       regval2_ID  <= {DBITS{1'b0}};
       wregno_ID	 <= {REGNOBITS{1'b0}};
       ctrlsig_ID <= 5'h0;
+//	 end else if (mispred_EX) begin
+//		PC_ID <= PC_ID;
+//		inst_ID	 <= {INSTBITS{1'b0}};
 	 end else begin
-      PC_ID	 <= PC_FE;
+		PC_ID	 <= PC_FE;
       // **TODO: Specify ID latches considering data dependency and branch instruction
 		// ...
 		//PC_ID <= PC_ID_w;
+		mispred_ID <= mispred_ID_w;
 		inst_ID	 <= inst_FE;
       op1_ID	 <= op1_ID_w;
       op2_ID	 <= op2_ID_w;
@@ -275,6 +286,7 @@
 			wregno_ID	 <= {REGNOBITS{1'b0}};
 		else
 			wregno_ID	 <= wregno_ID_w;
+			
       ctrlsig_ID <= ctrlsig_ID_w;
 		immval_ID <= sxt_imm_ID_w;
     end
@@ -286,7 +298,6 @@
   wire is_br_EX_w;
   wire is_jmp_EX_w;
  
-  wire [DBITS-1:0] pctarget_EX_w;
   reg br_cond_EX;
   
   reg [INSTBITS-1:0] inst_EX; /* This is for debugging */
@@ -340,6 +351,8 @@
 		aluout_EX_r = regval1_ID | immval_ID;
 	 else if(op1_ID == OP1_XORI)
 		aluout_EX_r = regval1_ID ^ immval_ID;
+	 else if(op1_ID == OP1_JAL)
+		aluout_EX_r = PC_ID;
 	 else
 		aluout_EX_r = {DBITS{1'b0}};
 	 end
@@ -353,8 +366,8 @@
   //assign pctarget_EX_w = ... ;
   
 	assign mispred_EX_w = (is_br_EX_w || is_jmp_EX_w) ? 1 : 0;
-	assign pctarget_EX_w = (is_br_EX_w && br_cond_EX) ? (PC_ID + sxt_imm_ID_w << 2) :
-								  is_jmp_EX_w ? (regval1_ID + sxt_imm_ID_w << 2) : PC_ID;
+	assign pctarget_EX_w = (is_br_EX_w && br_cond_EX) ? (PC_ID + (immval_ID * 4)) :
+								  is_jmp_EX_w ? (regval1_ID + (immval_ID * 4)) : PC_ID;
 	
 	
   // EX_latch
@@ -423,6 +436,9 @@
       wregno_MEM  <= {REGNOBITS{1'b0}};
       ctrlsig_MEM <= 1'b0;
     end else begin
+//		if (stall_pipe)
+//			inst_MEM		<= {INSTBITS{1'b0}};
+//		else
 		inst_MEM		<= inst_EX;
       regval_MEM  <= rd_mem_MEM_w ? rd_val_MEM_w : aluout_EX;
 		if (wregno_EX === 4'bx)
@@ -465,14 +481,14 @@
   end
   
   //STALL WORK
-  //wire rt = (rt_ID_w != 0) && (wregno_MEM == rt_ID_w || wregno_EX == rt_ID_w || wregno_ID == rt_ID_w);
-  //wire rs = (rs_ID_w != 0) && (wregno_MEM == rs_ID_w || wregno_EX == rs_ID_w || wregno_ID == rs_ID_w);
-  //assign stall_pipe = ((op1_ID_w == 6'b0) && (rs || rt)) ||
-	//						 ((is_br_ID_w) && (rs || rt )) ||
-	//						 ((rd_mem_ID_w) && rs) ||
-	//						 ((is_jmp_ID_w) && rs) ||
-	//						 ((wr_mem_ID_w) && (rs || rt)) ||
-	//						 ((inst_FE[31]) && rs); 
+//  wire rt = (rt_ID_w != 0) && (wregno_MEM == rt_ID_w || wregno_EX == rt_ID_w || wregno_ID == rt_ID_w);
+//  wire rs = (rs_ID_w != 0) && (wregno_MEM == rs_ID_w || wregno_EX == rs_ID_w || wregno_ID == rs_ID_w);
+//  assign stall_pipe = ((op1_ID_w == 6'b0) && (rs || rt)) ||
+//							 ((is_br_ID_w) && (rs || rt )) ||
+//							 ((rd_mem_ID_w) && rs) ||
+//							 ((is_jmp_ID_w) && rs) ||
+//							 ((wr_mem_ID_w) && (rs || rt)) ||
+//							 ((inst_FE[31]) && rs); 
 	
   
   
