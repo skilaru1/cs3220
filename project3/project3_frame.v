@@ -83,12 +83,20 @@
   wire locked;
   wire reset;
 
-  Pll myPll(
-    .refclk	(CLOCK_50),
-    .rst     	(!RESET_N),
-    .outclk_0 	(clk),
-    .locked   	(locked)
-  );
+//  Pll myPll(
+//    .refclk	(CLOCK_50),
+//    .rst     	(!RESET_N),
+//    .outclk_0 	(clk),
+//    .locked   	(locked)
+//  );
+  
+  clockSpeedUp myClock(
+	.refclk	(CLOCK_50),
+	.rst		(!RESET_N),
+	.outclk_0	(clk),
+	.locked		(locked)
+
+	);
 
   assign reset = !locked;
 
@@ -533,4 +541,6 @@ module SXT(IN, OUT);
 
   assign OUT = {{(OBITS-IBITS){IN[IBITS-1]}}, IN};
 endmodule
+
+
 
