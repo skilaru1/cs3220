@@ -12,6 +12,8 @@
   output [9:0] LEDR
 );
 
+  assign max_number_of_registers_from_uninferred_rams = -1;
+  
   parameter DBITS    = 32;
   parameter INSTSIZE = 32'd4;
   parameter INSTBITS = 32;
@@ -26,8 +28,14 @@
 
   // **[PRJ3-Part2] TODO:Change this to "fmedian2.mif" before submitting
   // [NOTICE] please note that both ime and dmem use the SAME "IDMEMINITFILE".
+<<<<<<< Updated upstream
   //parameter IDMEMINITFILE = "tests/test5.mif";
   parameter IDMEMINITFILE = "fmedian2.mif";
+=======
+  parameter IDMEMINITFILE = "tests/test.mif";
+  //parameter BTBINITFILE = "tests/btb_init.mif";
+  //parameter IDMEMINITFILE = "tests/fmedian2.mif";
+>>>>>>> Stashed changes
 
  
   
@@ -113,27 +121,65 @@
   // I-MEM
   (* ram_init_file = IDMEMINITFILE *)
   reg [DBITS-1:0] imem [IMEMWORDS-1:0];
+  
+  
+  
+  reg [DBITS-1:0] btb [255:0]; // target PC + valid bit
+  reg branchTaken_FE;
+  reg branchTaken_ID;
+  
+  
 
   // **TODO:
   // This statement is used to initialize the I-MEM
   // during simulation using Model-Sim
   // please remove this part before submitting
   initial begin
+<<<<<<< Updated upstream
     $readmemh("fmedian2.hex", imem);
   	 $readmemh("fmedian2.hex", dmem);
 	 //$readmemh("tests/test5.hex", imem);
   	 //$readmemh("tests/test5.hex", dmem);
+=======
+    //$readmemh("tests/fmedian2.hex", imem);
+  	 //$readmemh("tests/fmedian2.hex", dmem);
+	$readmemh("tests/test.hex", imem);
+	$readmemh("tests/test.hex", dmem);
+	
+	
+	//$readmemh("tests/btb_init.hex", btb);
+>>>>>>> Stashed changes
   end
+  
+//  integer i;
+//  for (i = 0; i < IMEMWORDS; i = i + 1) begin
+//	btb[i] = 32'b0;
+//  end
     
+<<<<<<< Updated upstream
   assign inst_FE_w = imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]];
+=======
+  assign inst_FE_w = (mispred_ID_w ? NOP : imem[PC_FE[IMEMADDRBITS-1:IMEMWORDBITS]]);
+  assign btb_target = btb[PC_FE];
+  
+  assign branchTaken_w = btb_target != {INSTBITS{1'b0}};
+  
+>>>>>>> Stashed changes
   
   always @ (posedge clk or posedge reset) begin
     if(reset)
       PC_FE <= STARTPC;
+<<<<<<< Updated upstream
     else if(mispred_EX)
       PC_FE <= pctarget_EX;		
+=======
+    else if(mispred_EX_w) // !(branch condition & valid)
+      PC_FE <= pctarget_EX_w;
+>>>>>>> Stashed changes
     else if(!stall_pipe)
       PC_FE <= pcplus_FE;
+	 else if(branchTaken_w)
+		PC_FE <= btb_target;
     else 
       PC_FE <= PC_FE;
   end
@@ -145,15 +191,28 @@
   always @ (posedge clk or posedge reset) begin
     if(reset)
       inst_FE <= {INSTBITS{1'b0}};
+		
     else begin
       // **TODO: Specify FE latches considering data dependency and branch instruction
 		// ...
+<<<<<<< Updated upstream
 		if (mispred_EX === 1)
 			inst_FE <= NOP;
 		else if (stall_pipe === 1)
+=======
+		//branchTaken_FE <= branchTaken_w;
+		
+		if (mispred_EX_w) begin
+			inst_FE <= NOP;
+			branchTaken_FE <= 1'b0;
+		end else if (stall_pipe) begin
+>>>>>>> Stashed changes
 			inst_FE <= inst_FE;
-		else
+			branchTaken_FE <= branchTaken_FE;
+		end else begin
 			inst_FE <= inst_FE_w;
+			branchTaken_FE <= branchTaken_w;
+		end
 	 end
   end
 
@@ -252,7 +311,12 @@
       regval2_ID  <= {DBITS{1'b0}};
       wregno_ID	 <= {REGNOBITS{1'b0}};
       ctrlsig_ID <= 5'h0;
+<<<<<<< Updated upstream
     end else if (stall_pipe === 1 || mispred_EX === 1) begin
+=======
+		branchTaken_ID <= 1'b0;
+    end else if (stall_pipe) begin
+>>>>>>> Stashed changes
 		PC_ID	 <= {DBITS{1'b0}};
 		inst_ID	 <= {INSTBITS{1'b0}};
       op1_ID	 <= {OP1BITS{1'b0}};
@@ -261,6 +325,26 @@
       regval2_ID  <= {DBITS{1'b0}};
       wregno_ID	 <= {REGNOBITS{1'b0}};
       ctrlsig_ID <= 5'h0;
+<<<<<<< Updated upstream
+=======
+//	 end else if (mispred_EX) begin
+//		PC_ID <= PC_ID;
+//		inst_ID	 <= {INSTBITS{1'b0}};
+		branchTaken_ID <= branchTaken_ID;
+	 end else if (mispred_EX_w) begin
+		PC_ID	 <= {DBITS{1'b0}};
+		inst_ID	 <= {INSTBITS{1'b0}};
+      op1_ID	 <= {OP1BITS{1'b0}};
+      op2_ID	 <= {OP2BITS{1'b0}};
+      regval1_ID  <= {DBITS{1'b0}};
+      regval2_ID  <= {DBITS{1'b0}};
+      wregno_ID	 <= {REGNOBITS{1'b0}};
+      ctrlsig_ID <= 5'h0;
+//	 end else if (mispred_EX) begin
+//		PC_ID <= PC_ID;
+//		inst_ID	 <= {INSTBITS{1'b0}};
+		branchTaken_ID <= 1'b0;
+>>>>>>> Stashed changes
 	 end else begin
       PC_ID	 <= PC_FE;
       // **TODO: Specify ID latches considering data dependency and branch instruction
@@ -277,6 +361,7 @@
 			wregno_ID	 <= wregno_ID_w;
       ctrlsig_ID <= ctrlsig_ID_w;
 		immval_ID <= sxt_imm_ID_w;
+		branchTaken_ID <= branchTaken_FE;
     end
   end
 
@@ -352,13 +437,23 @@
   //assign mispred_EX_w = ... ;
   //assign pctarget_EX_w = ... ;
   
+<<<<<<< Updated upstream
 	assign mispred_EX_w = (is_br_EX_w || is_jmp_EX_w) ? 1 : 0;
 	assign pctarget_EX_w = (is_br_EX_w && br_cond_EX) ? (PC_ID + sxt_imm_ID_w << 2) :
 								  is_jmp_EX_w ? (regval1_ID + sxt_imm_ID_w << 2) : PC_ID;
+=======
+	assign mispred_EX_w = !((br_cond_EX && is_br_EX_w) == branchTaken_ID);//(is_br_EX_w || is_jmp_EX_w) ? 1 : 0;
+	assign pctarget_EX_w = (is_br_EX_w && br_cond_EX) ? (PC_ID + (immval_ID * 4)) :
+								  is_jmp_EX_w ? (regval1_ID + (immval_ID * 4)) : PC_ID;
+	//always @ (posedge clk) begin
+		
+>>>>>>> Stashed changes
 	
 	
   // EX_latch
   always @ (posedge clk or posedge reset) begin
+		
+	
     if(reset) begin
 	   inst_EX	 <= {INSTBITS{1'b0}};
       aluout_EX	 <= {DBITS{1'b0}};
@@ -370,6 +465,12 @@
     end else begin
       // **TODO: Specify EX latches considering data dependency and branch instruction
 		// ...
+		if (pctarget_EX_w != PC_ID) begin
+			if (branchTaken_ID)
+				btb[PC_ID-4] = {INSTBITS{1'b0}};
+			else
+				btb[PC_ID-4] = pctarget_EX_w;
+		end
 		inst_EX <= inst_ID;
 		aluout_EX <= aluout_EX_r;
 		if (wregno_ID === 4'bx)

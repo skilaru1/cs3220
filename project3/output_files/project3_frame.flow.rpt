@@ -1,5 +1,9 @@
 Flow report for project3_frame
+<<<<<<< Updated upstream
 Wed Feb 26 19:11:27 2020
+=======
+Tue Mar 10 20:27:23 2020
+>>>>>>> Stashed changes
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,18 +44,27 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Flow Status                     ; Successful - Wed Feb 26 19:11:27 2020       ;
+=======
+; Flow Status                     ; Successful - Tue Mar 10 20:27:23 2020       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; project3_frame                              ;
 ; Top-level Entity Name           ; project3_frame                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEFA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
+<<<<<<< Updated upstream
 ; Logic utilization (in ALMs)     ; 549 / 18,480 ( 3 % )                        ;
 ; Total registers                 ; 664                                         ;
+=======
+; Logic utilization (in ALMs)     ; 1,083 / 18,480 ( 6 % )                      ;
+; Total registers                 ; 1111                                        ;
+>>>>>>> Stashed changes
 ; Total pins                      ; 68 / 224 ( 30 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 524,288 / 3,153,920 ( 17 % )                ;
+; Total block memory bits         ; 524,544 / 3,153,920 ( 17 % )                ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +80,11 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< Updated upstream
 ; Start date & time ; 02/26/2020 19:09:39 ;
+=======
+; Start date & time ; 03/10/2020 20:24:49 ;
+>>>>>>> Stashed changes
 ; Main task         ; Compilation         ;
 ; Revision Name     ; project3_frame      ;
 +-------------------+---------------------+
@@ -78,7 +95,11 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name       ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------------+----------------+
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID                ; 1095499831886.158276217912980          ; --            ; --                ; --             ;
+=======
+; COMPILER_SIGNATURE_ID                ; 1095499831886.158388628914948          ; --            ; --                ; --             ;
+>>>>>>> Stashed changes
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                ; tb_project3    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_project3                            ; --            ; --                ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --                ; eda_simulation ;
@@ -92,6 +113,16 @@ refer to the applicable agreement for further details.
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --                ; --             ;
 ; MISC_FILE                            ; Pll_sim/Pll.vo                         ; --            ; --                ; --             ;
 ; MISC_FILE                            ; Pll.cmp                                ; --            ; --                ; --             ;
+<<<<<<< Updated upstream
+=======
+; MISC_FILE                            ; clockSpeedUp.cmp                       ; --            ; --                ; --             ;
+; MISC_FILE                            ; clockSpeedUp_sim/clockSpeedUp.vo       ; --            ; --                ; --             ;
+; MISC_FILE                            ; btb.bsf                                ; --            ; --                ; --             ;
+; MISC_FILE                            ; btb_inst.v                             ; --            ; --                ; --             ;
+; MISC_FILE                            ; btb_bb.v                               ; --            ; --                ; --             ;
+; MISC_FILE                            ; btb.inc                                ; --            ; --                ; --             ;
+; MISC_FILE                            ; btb.cmp                                ; --            ; --                ; --             ;
+>>>>>>> Stashed changes
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; DE0_CV            ; Top            ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; assignment2_frame ; Top            ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; project2_frame    ; Top            ;
@@ -117,12 +148,21 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4986 MB             ; 00:00:54                           ;
 ; Fitter               ; 00:00:43     ; 1.2                     ; 6294 MB             ; 00:01:35                           ;
 ; Assembler            ; 00:00:05     ; 1.0                     ; 4846 MB             ; 00:00:06                           ;
 ; Timing Analyzer      ; 00:00:11     ; 1.7                     ; 5223 MB             ; 00:00:17                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4823 MB             ; 00:00:02                           ;
 ; Total                ; 00:01:40     ; --                      ; --                  ; 00:02:54                           ;
+=======
+; Analysis & Synthesis ; 00:00:50     ; 1.0                     ; 5018 MB             ; 00:01:05                           ;
+; Fitter               ; 00:01:12     ; 1.2                     ; 6377 MB             ; 00:03:13                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4852 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:16     ; 2.0                     ; 5238 MB             ; 00:00:29                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4837 MB             ; 00:00:04                           ;
+; Total                ; 00:02:28     ; --                      ; --                  ; 00:04:57                           ;
+>>>>>>> Stashed changes
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

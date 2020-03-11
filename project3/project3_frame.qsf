@@ -300,4 +300,10 @@ set_global_assignment -name QIP_FILE Pll.qip
 set_global_assignment -name VERILOG_FILE SevenSeg.v
 set_global_assignment -name VERILOG_FILE project3_frame.v
 set_global_assignment -name VERILOG_FILE tb_project3.v
+<<<<<<< Updated upstream
+=======
+set_global_assignment -name QIP_FILE clockSpeedUp.qip
+set_global_assignment -name SIP_FILE clockSpeedUp.sip
+set_global_assignment -name QIP_FILE btb.qip
+>>>>>>> Stashed changes
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

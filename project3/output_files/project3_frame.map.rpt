@@ -1,5 +1,9 @@
 Analysis & Synthesis report for project3_frame
+<<<<<<< Updated upstream
 Wed Feb 26 19:10:18 2020
+=======
+Tue Mar 10 20:25:38 2020
+>>>>>>> Stashed changes
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -21,6 +25,7 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  13. Inverted Register Statistics
  14. Registers Added for RAM Pass-Through Logic
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
+<<<<<<< Updated upstream
  16. Source assignments for altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated
  17. Parameter Settings for User Entity Instance: Top-level Entity: |project3_frame
  18. Parameter Settings for User Entity Instance: Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i
@@ -37,6 +42,26 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  29. Elapsed Time Per Partition
  30. Analysis & Synthesis Messages
  31. Analysis & Synthesis Suppressed Messages
+=======
+ 16. Source assignments for altsyncram:btb_rtl_0|altsyncram_kji1:auto_generated
+ 17. Source assignments for altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |project3_frame
+ 19. Parameter Settings for User Entity Instance: clockSpeedUp:myClock|clockSpeedUp_0002:clockspeedup_inst|altera_pll:altera_pll_i
+ 20. Parameter Settings for User Entity Instance: SXT:mysxt
+ 21. Parameter Settings for Inferred Entity Instance: altsyncram:btb_rtl_0
+ 22. Parameter Settings for Inferred Entity Instance: altsyncram:dmem_rtl_0
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "SevenSeg:ss0"
+ 25. Port Connectivity Checks: "SevenSeg:ss1"
+ 26. Port Connectivity Checks: "SevenSeg:ss2"
+ 27. Port Connectivity Checks: "SevenSeg:ss3"
+ 28. Port Connectivity Checks: "SevenSeg:ss4"
+ 29. Port Connectivity Checks: "SevenSeg:ss5"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
+>>>>>>> Stashed changes
 
 
 
@@ -62,16 +87,24 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status     ; Successful - Wed Feb 26 19:10:18 2020       ;
+=======
+; Analysis & Synthesis Status     ; Successful - Tue Mar 10 20:25:38 2020       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; project3_frame                              ;
 ; Top-level Entity Name           ; project3_frame                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
+<<<<<<< Updated upstream
 ; Total registers                 ; 619                                         ;
+=======
+; Total registers                 ; 998                                         ;
+>>>>>>> Stashed changes
 ; Total pins                      ; 68                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 524,288                                     ;
+; Total block memory bits         ; 524,544                                     ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -188,6 +221,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
+<<<<<<< Updated upstream
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                      ;
 +--------------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
@@ -267,6 +301,92 @@ refer to the applicable agreement for further details.
 ;       |altsyncram_94p1:auto_generated| ; 2 (0)               ; 1 (1)                     ; 524288            ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated                    ; altsyncram_94p1 ; work         ;
 ;          |decode_5la:decode2|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2 ; decode_5la      ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
+=======
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                           ;
++--------------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; File Name with User-Entered Path                       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                   ; Library      ;
++--------------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; Pll/Pll_0002.v                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll/Pll_0002.v                                         ; Pll          ;
+; SevenSeg.v                                             ; yes             ; User Verilog HDL File                                 ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/SevenSeg.v                                             ;              ;
+; project3_frame.v                                       ; yes             ; User Verilog HDL File                                 ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v                                       ;              ;
+; tb_project3.v                                          ; yes             ; User Verilog HDL File                                 ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/tb_project3.v                                          ;              ;
+; clockSpeedUp.v                                         ; yes             ; User Wizard-Generated File                            ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/clockSpeedUp.v                                         ; clockSpeedUp ;
+; clockSpeedUp/clockSpeedUp_0002.v                       ; yes             ; User Verilog HDL File                                 ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/clockSpeedUp/clockSpeedUp_0002.v                       ; clockSpeedUp ;
+; tests/test.hex                                         ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/tests/test.hex                                         ;              ;
+; altera_pll.v                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altera_pll.v                                            ;              ;
+; altsyncram.tdf                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf                                          ;              ;
+; stratix_ram_block.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                   ;              ;
+; lpm_mux.inc                                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mux.inc                                             ;              ;
+; lpm_decode.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_decode.inc                                          ;              ;
+; aglobal180.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                                          ;              ;
+; a_rdenreg.inc                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_rdenreg.inc                                           ;              ;
+; altrom.inc                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc                                              ;              ;
+; altram.inc                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc                                              ;              ;
+; altdpram.inc                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc                                            ;              ;
+; db/altsyncram_kji1.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/altsyncram_kji1.tdf                                 ;              ;
+; db/altsyncram_94p1.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/altsyncram_94p1.tdf                                 ;              ;
+; db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif ;              ;
+; db/decode_5la.tdf                                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/decode_5la.tdf                                      ;              ;
+; db/decode_u0a.tdf                                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/decode_u0a.tdf                                      ;              ;
+; db/mux_2hb.tdf                                         ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/mux_2hb.tdf                                         ;              ;
++--------------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                   ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                           ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 1112                                                                                            ;
+;                                             ;                                                                                                 ;
+; Combinational ALUT usage for logic          ; 1381                                                                                            ;
+;     -- 7 input functions                    ; 33                                                                                              ;
+;     -- 6 input functions                    ; 725                                                                                             ;
+;     -- 5 input functions                    ; 229                                                                                             ;
+;     -- 4 input functions                    ; 132                                                                                             ;
+;     -- <=3 input functions                  ; 262                                                                                             ;
+;                                             ;                                                                                                 ;
+; Dedicated logic registers                   ; 998                                                                                             ;
+;                                             ;                                                                                                 ;
+; I/O pins                                    ; 68                                                                                              ;
+; Total MLAB memory bits                      ; 0                                                                                               ;
+; Total block memory bits                     ; 524544                                                                                          ;
+;                                             ;                                                                                                 ;
+; Total DSP Blocks                            ; 0                                                                                               ;
+;                                             ;                                                                                                 ;
+; Total PLLs                                  ; 1                                                                                               ;
+;     -- PLLs                                 ; 1                                                                                               ;
+;                                             ;                                                                                                 ;
+; Maximum fan-out node                        ; clockSpeedUp:myClock|clockSpeedUp_0002:clockspeedup_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
+; Maximum fan-out                             ; 1067                                                                                            ;
+; Total fan-out                               ; 11884                                                                                           ;
+; Average fan-out                             ; 4.60                                                                                            ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Entity Name       ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |project3_frame                             ; 1381 (1337)         ; 998 (997)                 ; 524544            ; 0          ; 68   ; 0            ; |project3_frame                                                                                  ; project3_frame    ; work         ;
+;    |SevenSeg:ss0|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss0                                                                     ; SevenSeg          ; work         ;
+;    |SevenSeg:ss1|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss1                                                                     ; SevenSeg          ; work         ;
+;    |SevenSeg:ss2|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss2                                                                     ; SevenSeg          ; work         ;
+;    |SevenSeg:ss3|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss3                                                                     ; SevenSeg          ; work         ;
+;    |SevenSeg:ss4|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss4                                                                     ; SevenSeg          ; work         ;
+;    |SevenSeg:ss5|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|SevenSeg:ss5                                                                     ; SevenSeg          ; work         ;
+;    |altsyncram:btb_rtl_0|                   ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:btb_rtl_0                                                             ; altsyncram        ; work         ;
+;       |altsyncram_kji1:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:btb_rtl_0|altsyncram_kji1:auto_generated                              ; altsyncram_kji1   ; work         ;
+;    |altsyncram:dmem_rtl_0|                  ; 2 (0)               ; 1 (0)                     ; 524288            ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0                                                            ; altsyncram        ; work         ;
+;       |altsyncram_94p1:auto_generated|      ; 2 (0)               ; 1 (1)                     ; 524288            ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated                             ; altsyncram_94p1   ; work         ;
+;          |decode_5la:decode2|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|decode_5la:decode2          ; decode_5la        ; work         ;
+;    |clockSpeedUp:myClock|                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|clockSpeedUp:myClock                                                             ; clockSpeedUp      ; clockSpeedUp ;
+;       |clockSpeedUp_0002:clockspeedup_inst| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|clockSpeedUp:myClock|clockSpeedUp_0002:clockspeedup_inst                         ; clockSpeedUp_0002 ; clockSpeedUp ;
+;          |altera_pll:altera_pll_i|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |project3_frame|clockSpeedUp:myClock|clockSpeedUp_0002:clockspeedup_inst|altera_pll:altera_pll_i ; altera_pll        ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
+>>>>>>> Stashed changes
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -275,6 +395,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------------------------------------------------+
 ; Name                                                            ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                                    ;
 +-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------------------------------------------------+
+; altsyncram:btb_rtl_0|altsyncram_kji1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 256          ; 1            ; 256          ; 1            ; 256    ; None                                                   ;
 ; altsyncram:dmem_rtl_0|altsyncram_94p1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16384        ; 32           ; 16384        ; 32           ; 524288 ; db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif ;
 +-----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------------------------------------------------+
 
@@ -678,12 +799,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< Updated upstream
 ; Total registers                              ; 619   ;
 ; Number of registers using Synchronous Clear  ; 126   ;
 ; Number of registers using Synchronous Load   ; 46    ;
 ; Number of registers using Asynchronous Clear ; 496   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 302   ;
+=======
+; Total registers                              ; 998   ;
+; Number of registers using Synchronous Clear  ; 178   ;
+; Number of registers using Synchronous Load   ; 55    ;
+; Number of registers using Asynchronous Clear ; 858   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 648   ;
+>>>>>>> Stashed changes
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -712,9 +842,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX_out[21]                             ; 7       ;
 ; HEX_out[22]                             ; 7       ;
 ; HEX_out[20]                             ; 7       ;
+<<<<<<< Updated upstream
+=======
+; PC_FE[8]                                ; 89      ;
+>>>>>>> Stashed changes
 ; dmem_rtl_0_bypass[36]                   ; 1       ;
-; dmem_rtl_0_bypass[40]                   ; 1       ;
 ; dmem_rtl_0_bypass[38]                   ; 1       ;
+<<<<<<< Updated upstream
 ; dmem_rtl_0_bypass[42]                   ; 1       ;
 ; dmem_rtl_0_bypass[74]                   ; 1       ;
 ; dmem_rtl_0_bypass[54]                   ; 1       ;
@@ -735,18 +869,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dmem_rtl_0_bypass[88]                   ; 1       ;
 ; dmem_rtl_0_bypass[87]                   ; 1       ;
 ; dmem_rtl_0_bypass[86]                   ; 1       ;
+=======
+; dmem_rtl_0_bypass[50]                   ; 1       ;
+; dmem_rtl_0_bypass[48]                   ; 1       ;
+; dmem_rtl_0_bypass[44]                   ; 1       ;
+; dmem_rtl_0_bypass[42]                   ; 1       ;
+; dmem_rtl_0_bypass[60]                   ; 1       ;
+; dmem_rtl_0_bypass[58]                   ; 1       ;
+; dmem_rtl_0_bypass[56]                   ; 1       ;
+; dmem_rtl_0_bypass[54]                   ; 1       ;
+; dmem~12                                 ; 1       ;
+; dmem_rtl_0_bypass[52]                   ; 1       ;
+; dmem_rtl_0_bypass[51]                   ; 1       ;
+; dmem~30                                 ; 1       ;
+; dmem_rtl_0_bypass[88]                   ; 1       ;
+; dmem_rtl_0_bypass[87]                   ; 1       ;
+; dmem_rtl_0_bypass[74]                   ; 1       ;
+; dmem_rtl_0_bypass[62]                   ; 1       ;
+; dmem_rtl_0_bypass[72]                   ; 1       ;
+; dmem_rtl_0_bypass[70]                   ; 1       ;
+; dmem_rtl_0_bypass[68]                   ; 1       ;
+; dmem_rtl_0_bypass[66]                   ; 1       ;
+; dmem_rtl_0_bypass[64]                   ; 1       ;
+; dmem_rtl_0_bypass[40]                   ; 1       ;
+; dmem_rtl_0_bypass[46]                   ; 1       ;
+; dmem_rtl_0_bypass[86]                   ; 1       ;
+; dmem_rtl_0_bypass[92]                   ; 1       ;
+; dmem_rtl_0_bypass[90]                   ; 1       ;
+>>>>>>> Stashed changes
 ; dmem_rtl_0_bypass[84]                   ; 1       ;
 ; dmem_rtl_0_bypass[82]                   ; 1       ;
 ; dmem_rtl_0_bypass[80]                   ; 1       ;
 ; dmem_rtl_0_bypass[78]                   ; 1       ;
 ; dmem_rtl_0_bypass[76]                   ; 1       ;
+<<<<<<< Updated upstream
 ; dmem_rtl_0_bypass[72]                   ; 1       ;
 ; dmem_rtl_0_bypass[70]                   ; 1       ;
 ; dmem_rtl_0_bypass[68]                   ; 1       ;
+=======
+>>>>>>> Stashed changes
 ; dmem_rtl_0_bypass[34]                   ; 1       ;
 ; dmem_rtl_0_bypass[32]                   ; 1       ;
+<<<<<<< Updated upstream
 ; dmem_rtl_0_bypass[30]                   ; 1       ;
 ; Total number of inverted registers = 53 ;         ;
+=======
+; Total number of inverted registers = 55 ;         ;
+>>>>>>> Stashed changes
 +-----------------------------------------+---------+
 
 
@@ -755,6 +924,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+--------------------+
 ; Register Name         ; RAM Name           ;
 +-----------------------+--------------------+
+; btb_rtl_0_bypass[0]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[1]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[2]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[3]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[4]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[5]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[6]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[7]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[8]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[9]   ; btb_rtl_0          ;
+; btb_rtl_0_bypass[10]  ; btb_rtl_0          ;
+; btb_rtl_0_bypass[11]  ; btb_rtl_0          ;
+; btb_rtl_0_bypass[12]  ; btb_rtl_0          ;
+; btb_rtl_0_bypass[13]  ; btb_rtl_0          ;
+; btb_rtl_0_bypass[14]  ; btb_rtl_0          ;
+; btb_rtl_0_bypass[15]  ; btb_rtl_0          ;
+; btb_rtl_0_bypass[16]  ; btb_rtl_0          ;
+; btb_rtl_0_bypass[17]  ; btb_rtl_0          ;
 ; dmem_rtl_0_bypass[0]  ; dmem_rtl_0         ;
 ; dmem_rtl_0_bypass[1]  ; dmem_rtl_0         ;
 ; dmem_rtl_0_bypass[2]  ; dmem_rtl_0         ;
@@ -851,6 +1038,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+--------------------+
 
 
+<<<<<<< Updated upstream
 +----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
@@ -872,6 +1060,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 75:1               ; 11 bits   ; 550 LEs       ; 253 LEs              ; 297 LEs                ; No         ; |project3_frame|aluout_EX_r[4] ;
 ; 78:1               ; 2 bits    ; 104 LEs       ; 50 LEs               ; 54 LEs                 ; No         ; |project3_frame|aluout_EX_r[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+=======
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 49 bits   ; 98 LEs        ; 0 LEs                ; 98 LEs                 ; Yes        ; |project3_frame|PC_ID[1]        ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |project3_frame|PC_FE[27]       ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |project3_frame|inst_FE[8]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |project3_frame|wregno_ID[3]    ;
+; 18:1               ; 32 bits   ; 384 LEs       ; 320 LEs              ; 64 LEs                 ; Yes        ; |project3_frame|regval1_ID[23]  ;
+; 18:1               ; 32 bits   ; 384 LEs       ; 320 LEs              ; 64 LEs                 ; Yes        ; |project3_frame|regval2_ID[5]   ;
+; 77:1               ; 12 bits   ; 612 LEs       ; 156 LEs              ; 456 LEs                ; Yes        ; |project3_frame|aluout_EX[24]   ;
+; 80:1               ; 3 bits    ; 159 LEs       ; 78 LEs               ; 81 LEs                 ; Yes        ; |project3_frame|aluout_EX[30]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |project3_frame|ShiftLeft0      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |project3_frame|ShiftLeft0      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |project3_frame|ShiftRight0     ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |project3_frame|ShiftRight0     ;
+; 4:1                ; 50 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |project3_frame|ShiftRight0     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |project3_frame|PC_FE           ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |project3_frame|PC_FE           ;
+; 77:1               ; 11 bits   ; 561 LEs       ; 264 LEs              ; 297 LEs                ; No         ; |project3_frame|aluout_EX_r[10] ;
+; 80:1               ; 2 bits    ; 106 LEs       ; 52 LEs               ; 54 LEs                 ; No         ; |project3_frame|aluout_EX_r[3]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Source assignments for altsyncram:btb_rtl_0|altsyncram_kji1:auto_generated ;
++---------------------------------+--------------------+------+--------------+
+; Assignment                      ; Value              ; From ; To           ;
++---------------------------------+--------------------+------+--------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -            ;
++---------------------------------+--------------------+------+--------------+
+>>>>>>> Stashed changes
 
 
 +-----------------------------------------------------------------------------+
@@ -899,7 +1121,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADDRLEDR       ; 11111111111111111111000000100000 ; Unsigned Binary            ;
 ; ADDRKEY        ; 11111111111111111111000010000000 ; Unsigned Binary            ;
 ; ADDRSW         ; 11111111111111111111000010010000 ; Unsigned Binary            ;
+<<<<<<< Updated upstream
 ; IDMEMINITFILE  ; tests/test5.mif                  ; String                     ;
+=======
+; IDMEMINITFILE  ; tests/test.mif                   ; String                     ;
+>>>>>>> Stashed changes
 ; IMEMADDRBITS   ; 16                               ; Signed Integer             ;
 ; IMEMWORDBITS   ; 2                                ; Signed Integer             ;
 ; IMEMWORDS      ; 16384                            ; Signed Integer             ;
@@ -1200,6 +1426,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: altsyncram:btb_rtl_0      ;
++------------------------------------+----------------------+----------------+
+; Parameter Name                     ; Value                ; Type           ;
++------------------------------------+----------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped        ;
+; WIDTH_A                            ; 1                    ; Untyped        ;
+; WIDTHAD_A                          ; 8                    ; Untyped        ;
+; NUMWORDS_A                         ; 256                  ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped        ;
+; WIDTH_B                            ; 1                    ; Untyped        ;
+; WIDTHAD_B                          ; 8                    ; Untyped        ;
+; NUMWORDS_B                         ; 256                  ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped        ;
+; BYTE_SIZE                          ; 8                    ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped        ;
+; INIT_FILE                          ; UNUSED               ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_kji1      ; Untyped        ;
++------------------------------------+----------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: altsyncram:dmem_rtl_0                                       ;
 +------------------------------------+--------------------------------------------------------+----------------+
@@ -1266,7 +1553,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------+
 ; Name                                      ; Value                 ;
 +-------------------------------------------+-----------------------+
-; Number of entity instances                ; 1                     ;
+; Number of entity instances                ; 2                     ;
+; Entity Instance                           ; altsyncram:btb_rtl_0  ;
+;     -- OPERATION_MODE                     ; DUAL_PORT             ;
+;     -- WIDTH_A                            ; 1                     ;
+;     -- NUMWORDS_A                         ; 256                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED          ;
+;     -- WIDTH_B                            ; 1                     ;
+;     -- NUMWORDS_B                         ; 256                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED          ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                  ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ;
 ; Entity Instance                           ; altsyncram:dmem_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT             ;
 ;     -- WIDTH_A                            ; 32                    ;
@@ -1340,6 +1638,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+<<<<<<< Updated upstream
 ; arriav_ff             ; 619                         ;
 ;     CLR               ; 97                          ;
 ;     CLR SCLR          ; 107                         ;
@@ -1365,12 +1664,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         6 data inputs ; 356                         ;
 ;     shared            ; 28                          ;
 ;         2 data inputs ; 28                          ;
+=======
+; arriav_ff             ; 998                         ;
+;     CLR               ; 102                         ;
+;     CLR SCLR          ; 125                         ;
+;     CLR SLD           ; 32                          ;
+;     ENA               ; 49                          ;
+;     ENA CLR           ; 546                         ;
+;     ENA CLR SCLR      ; 30                          ;
+;     ENA CLR SCLR SLD  ; 23                          ;
+;     plain             ; 91                          ;
+; arriav_lcell_comb     ; 1389                        ;
+;     arith             ; 124                         ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 64                          ;
+;         5 data inputs ; 30                          ;
+;     extend            ; 33                          ;
+;         7 data inputs ; 33                          ;
+;     normal            ; 1200                        ;
+;         1 data inputs ; 33                          ;
+;         2 data inputs ; 60                          ;
+;         3 data inputs ; 51                          ;
+;         4 data inputs ; 132                         ;
+;         5 data inputs ; 199                         ;
+;         6 data inputs ; 725                         ;
+;     shared            ; 32                          ;
+;         2 data inputs ; 32                          ;
+>>>>>>> Stashed changes
 ; boundary_port         ; 68                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 64                          ;
+; stratixv_ram_block    ; 65                          ;
 ;                       ;                             ;
+<<<<<<< Updated upstream
 ; Max LUT depth         ; 7.70                        ;
 ; Average LUT depth     ; 3.27                        ;
+=======
+; Max LUT depth         ; 12.60                       ;
+; Average LUT depth     ; 4.07                        ;
+>>>>>>> Stashed changes
 +-----------------------+-----------------------------+
 
 
@@ -1379,7 +1710,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
+<<<<<<< Updated upstream
 ; Top            ; 00:00:07     ;
+=======
+; Top            ; 00:00:10     ;
+>>>>>>> Stashed changes
 +----------------+--------------+
 
 
@@ -1389,7 +1724,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Wed Feb 26 19:09:38 2020
+=======
+    Info: Processing started: Tue Mar 10 20:24:48 2020
+>>>>>>> Stashed changes
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project3 -c project3_frame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1401,6 +1740,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file sevense
     Info (12023): Found entity 1: SevenSeg File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/SevenSeg.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file project3_frame.v
     Info (12023): Found entity 1: project3_frame File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 1
+<<<<<<< Updated upstream
     Info (12023): Found entity 2: SXT File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 511
 Info (12021): Found 1 design units, including 1 entities, in source file tb_project3.v
     Info (12023): Found entity 1: tb_project3 File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/tb_project3.v Line: 3
@@ -1424,6 +1764,48 @@ Warning (10030): Net "imem.we_a" at project3_frame.v(115) has no driver or initi
 Info (12128): Elaborating entity "Pll" for hierarchy "Pll:myPll" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 91
 Info (12128): Elaborating entity "Pll_0002" for hierarchy "Pll:myPll|Pll_0002:pll_inst" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll.v Line: 20
 Info (12128): Elaborating entity "altera_pll" for hierarchy "Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll/Pll_0002.v Line: 85
+=======
+    Info (12023): Found entity 2: SXT File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 593
+Info (12021): Found 1 design units, including 1 entities, in source file tb_project3.v
+    Info (12023): Found entity 1: tb_project3 File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/tb_project3.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file clockspeedup.v
+    Info (12023): Found entity 1: clockSpeedUp File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/clockSpeedUp.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file clockspeedup/clockspeedup_0002.v
+    Info (12023): Found entity 1: clockSpeedUp_0002 File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/clockSpeedUp/clockSpeedUp_0002.v Line: 2
+Info (12021): Found 2 design units, including 2 entities, in source file btb.v
+    Info (12023): Found entity 1: btb_meminit_k6k File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/btb.v Line: 46
+    Info (12023): Found entity 2: btb File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/btb.v Line: 253
+Warning (10236): Verilog HDL Implicit Net warning at project3_frame.v(15): created implicit net for "max_number_of_registers_from_uninferred_rams" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at project3_frame.v(159): created implicit net for "btb_target" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 159
+Warning (10236): Verilog HDL Implicit Net warning at project3_frame.v(161): created implicit net for "branchTaken_w" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 161
+Info (12127): Elaborating entity "project3_frame" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(15): object "max_number_of_registers_from_uninferred_rams" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 15
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(114): object "mispred_EX" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 114
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(115): object "mispred_ID" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 115
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(119): object "pctarget_EX" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 119
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(222): object "wr_reg_EX_w" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 222
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(223): object "wr_reg_MEM_w" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 223
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(241): object "inst_ID_w" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 241
+Warning (10036): Verilog HDL or VHDL warning at project3_frame.v(476): object "inst_MEM" assigned a value but never read File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 476
+Warning (10230): Verilog HDL assignment warning at project3_frame.v(15): truncated value with size 32 to match size of target (1) File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 15
+Warning (10850): Verilog HDL warning at project3_frame.v(146): number of words (231) in memory file does not match the number of elements in the address range [0:16383] File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 146
+Warning (10850): Verilog HDL warning at project3_frame.v(147): number of words (231) in memory file does not match the number of elements in the address range [0:16383] File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 147
+Warning (10230): Verilog HDL assignment warning at project3_frame.v(159): truncated value with size 32 to match size of target (1) File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 159
+Warning (10230): Verilog HDL assignment warning at project3_frame.v(265): truncated value with size 32 to match size of target (1) File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 265
+Warning (10230): Verilog HDL assignment warning at project3_frame.v(266): truncated value with size 32 to match size of target (1) File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 266
+Warning (10230): Verilog HDL assignment warning at project3_frame.v(267): truncated value with size 32 to match size of target (1) File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 267
+Warning (10230): Verilog HDL assignment warning at project3_frame.v(268): truncated value with size 32 to match size of target (1) File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 268
+Warning (10230): Verilog HDL assignment warning at project3_frame.v(269): truncated value with size 32 to match size of target (1) File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 269
+Warning (10764): Verilog HDL warning at project3_frame.v(395): converting signed shift amount to unsigned File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 395
+Warning (10764): Verilog HDL warning at project3_frame.v(396): converting signed shift amount to unsigned File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 396
+Warning (10235): Verilog HDL Always Construct warning at project3_frame.v(411): variable "PC_ID" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 411
+Warning (10030): Net "imem.data_a" at project3_frame.v(129) has no driver or initial value, using a default initial value '0' File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 129
+Warning (10030): Net "imem.waddr_a" at project3_frame.v(129) has no driver or initial value, using a default initial value '0' File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 129
+Warning (10030): Net "imem.we_a" at project3_frame.v(129) has no driver or initial value, using a default initial value '0' File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 129
+Info (12128): Elaborating entity "clockSpeedUp" for hierarchy "clockSpeedUp:myClock" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 102
+Info (12128): Elaborating entity "clockSpeedUp_0002" for hierarchy "clockSpeedUp:myClock|clockSpeedUp_0002:clockspeedup_inst" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/clockSpeedUp.v Line: 20
+Info (12128): Elaborating entity "altera_pll" for hierarchy "clockSpeedUp:myClock|clockSpeedUp_0002:clockspeedup_inst|altera_pll:altera_pll_i" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/clockSpeedUp/clockSpeedUp_0002.v Line: 85
+>>>>>>> Stashed changes
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
 Info (12130): Elaborated megafunction instantiation "Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll/Pll_0002.v Line: 85
 Info (12133): Instantiated megafunction "Pll:myPll|Pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/Pll/Pll_0002.v Line: 85
@@ -1487,15 +1869,40 @@ Info (12133): Instantiated megafunction "Pll:myPll|Pll_0002:pll_inst|altera_pll:
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
+<<<<<<< Updated upstream
 Info (12128): Elaborating entity "SXT" for hierarchy "SXT:mysxt" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 212
 Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:ss5" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 483
+=======
+Info (12128): Elaborating entity "SXT" for hierarchy "SXT:mysxt" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 259
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:ss5" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 565
+Warning (276020): Inferred RAM node "btb_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+>>>>>>> Stashed changes
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (276020): Inferred RAM node "dmem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (276014): Found 1 instances of uninferred RAM logic
+<<<<<<< Updated upstream
     Info (276007): RAM logic "imem" is uninferred due to asynchronous read logic File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 115
+=======
+    Info (276007): RAM logic "imem" is uninferred due to asynchronous read logic File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 129
+>>>>>>> Stashed changes
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/project3_frame.ram0_project3_frame_aafa3dba.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Info (19000): Inferred 1 megafunctions from design logic
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "btb_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 1
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 1
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
     Info (276029): Inferred altsyncram megafunction from the following design logic: "dmem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
@@ -1512,6 +1919,24 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/project3_frame.ram1_project3_frame_aafa3dba.hdl.mif
+Info (12130): Elaborated megafunction instantiation "altsyncram:btb_rtl_0"
+Info (12133): Instantiated megafunction "altsyncram:btb_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "1"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "1"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kji1.tdf
+    Info (12023): Found entity 1: altsyncram_kji1 File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/db/altsyncram_kji1.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "altsyncram:dmem_rtl_0"
 Info (12133): Instantiated megafunction "altsyncram:dmem_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1632,6 +2057,7 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 5
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 5
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Usha/Documents/cs3220/project3/cs3220/project3/project3_frame.v Line: 5
+<<<<<<< Updated upstream
 Info (21057): Implemented 1312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 52 output pins
@@ -1643,6 +2069,19 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 111 warnings
     Info: Processing ended: Wed Feb 26 19:10:18 2020
     Info: Elapsed time: 00:00:40
     Info: Total CPU time (on all processors): 00:00:54
+=======
+Info (21057): Implemented 2313 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 2179 logic cells
+    Info (21064): Implemented 65 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 127 warnings
+    Info: Peak virtual memory: 5018 megabytes
+    Info: Processing ended: Tue Mar 10 20:25:38 2020
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:01:06
+>>>>>>> Stashed changes
 
 
 +------------------------------------------+
