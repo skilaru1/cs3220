@@ -1,0 +1,119 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Usha/Documents/project4/project3/simulation/modelsim
+vPll
+Z1 !s110 1583978932
+!i10b 1
+!s100 c[<T]DH]FY:l:g3fTRkon3
+I?Z@PDEl65?c31g6D?TjQh0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1583968701
+8C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo
+FC:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1583978931.000000
+!s107 C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo|
+!s90 -reportprogress|300|C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo|
+!i113 1
+Z4 tCvgOpt 0
+n@pll
+vproject3_frame
+Z5 !s110 1583979627
+!i10b 1
+!s100 b^?6YPh9SFPKd7?KA8@HL3
+Ik^MD:mWdg_=Zah7`X>^UQ1
+R2
+R0
+Z6 w1583979621
+Z7 8C:/Users/Usha/Documents/project4/project3/project3_frame.v
+Z8 FC:/Users/Usha/Documents/project4/project3/project3_frame.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1583979627.000000
+Z10 !s107 C:/Users/Usha/Documents/project4/project3/project3_frame.v|
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/Usha/Documents/project4/project3/project3_frame.v|
+!i113 1
+Z12 o-work work
+R4
+vSevenSeg
+R1
+!i10b 1
+!s100 6U9_D4W_?>BAiUofmj`EP3
+I7fST:UoiU[PVc8g1bQQJM3
+R2
+R0
+w1583968692
+8C:/Users/Usha/Documents/project4/project3/SevenSeg.v
+FC:/Users/Usha/Documents/project4/project3/SevenSeg.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z13 !s108 1583978932.000000
+!s107 C:/Users/Usha/Documents/project4/project3/SevenSeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usha/Documents/project4/project3|C:/Users/Usha/Documents/project4/project3/SevenSeg.v|
+!i113 1
+Z14 o-vlog01compat -work work
+Z15 !s92 -vlog01compat -work work +incdir+C:/Users/Usha/Documents/project4/project3
+R4
+n@seven@seg
+vSXT
+R5
+!i10b 1
+!s100 FGWjQFknV=kldj0z8leX^3
+I_L`zC2RBJNnc@][hfPDYM2
+R2
+R0
+R6
+R7
+R8
+L0 587
+R3
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R4
+n@s@x@t
+vtb_project3
+R1
+!i10b 1
+!s100 A`k3LU]gYD?8KNL6CWcBP1
+IY1UYi^dUhIQNQZll4YzCN0
+R2
+R0
+w1583968691
+8C:/Users/Usha/Documents/project4/project3/tb_project3.v
+FC:/Users/Usha/Documents/project4/project3/tb_project3.v
+L0 3
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Usha/Documents/project4/project3/tb_project3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usha/Documents/project4/project3|C:/Users/Usha/Documents/project4/project3/tb_project3.v|
+!i113 1
+R14
+R15
+R4

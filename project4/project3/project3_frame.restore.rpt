@@ -1,0 +1,101 @@
+Restore Archived Project report for project3_frame
+Fri Jan 31 12:45:54 2020
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Jan 31 12:45:54 2020 ;
+; Revision Name                   ; project3_frame                        ;
+; Top-level Entity Name           ; project3_frame                        ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/Jaewon Lee/Google Drive/Class/TA/CS3220/Project 3/cs3220-project3.qar' into the 'C:/Users/Jaewon Lee/Google Drive/Class/TA/CS3220/Project 3/cs3220-project3_restored/' directory
+Info: Generated report 'project3_frame.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Fri Jan 31 12:45:54 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-------------------------+
+; Files Restored          ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; qar_info.json           ;
+; Pll.cmp                 ;
+; Pll.qip                 ;
+; Pll.sip                 ;
+; Pll.spd                 ;
+; Pll.v                   ;
+; Pll/Pll_0002.qip        ;
+; Pll/Pll_0002.v          ;
+; Pll_sim/Pll.vo          ;
+; SevenSeg.v              ;
+; project3.qpf            ;
+; project3.sdc            ;
+; project3_frame.qsf      ;
+; project3_frame.v        ;
+; tb_project3.v           ;
+; tests/test1.asm         ;
+; tests/test1.hex         ;
+; tests/test1.mif         ;
+; tests/test2.asm         ;
+; tests/test2.hex         ;
+; tests/test2.mif         ;
+; tests/test3.asm         ;
+; tests/test3.mif         ;
+; tests/test4.asm         ;
+; tests/test4.mif         ;
+; tests/test5.asm         ;
+; tests/test5.mif         ;
+; assignment_defaults.qdf ;
++-------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

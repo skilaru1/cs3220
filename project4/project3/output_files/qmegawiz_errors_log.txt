@@ -1,0 +1,11 @@
+
+
+C:/Users/Usha/Documents/project4/project3/clockSpeedUp.v
+
+Mar 11 11PM:12:23>: Megafunction PLL Intel FPGA IP v18.0 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/Usha/Documents/project4/project3/clockSpeedUp.v
+
+Mar 11 11PM:45:16>: Megafunction PLL Intel FPGA IP v18.0 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

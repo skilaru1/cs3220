@@ -1,0 +1,812 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do project3_frame_run_msim_rtl_verilog.do
+# if ![file isdirectory project3_frame_iputf_libs] {
+# 	file mkdir project3_frame_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:08:51 on Mar 11,2020
+# vlog -reportprogress 300 C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo 
+# -- Compiling module Pll
+# 
+# Top level modules:
+# 	Pll
+# End time: 22:08:52 on Mar 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Usha/Documents/project4/project3 {C:/Users/Usha/Documents/project4/project3/SevenSeg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:08:52 on Mar 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usha/Documents/project4/project3" C:/Users/Usha/Documents/project4/project3/SevenSeg.v 
+# -- Compiling module SevenSeg
+# 
+# Top level modules:
+# 	SevenSeg
+# End time: 22:08:52 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usha/Documents/project4/project3 {C:/Users/Usha/Documents/project4/project3/project3_frame.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:08:52 on Mar 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usha/Documents/project4/project3" C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# -- Compiling module SXT
+# 
+# Top level modules:
+# 	project3_frame
+# End time: 22:08:52 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Usha/Documents/project4/project3 {C:/Users/Usha/Documents/project4/project3/tb_project3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:08:52 on Mar 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usha/Documents/project4/project3" C:/Users/Usha/Documents/project4/project3/tb_project3.v 
+# -- Compiling module tb_project3
+# 
+# Top level modules:
+# 	tb_project3
+# End time: 22:08:52 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_project3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_project3 
+# Start time: 22:08:52 on Mar 11,2020
+# Loading work.tb_project3
+# Loading work.project3_frame
+# Loading work.Pll
+# Loading sv_std.std
+# Loading altera_lnsim_ver.altera_lnsim_functions
+# Loading altera_lnsim_ver.altera_pll
+# Loading work.SXT
+# Loading work.SevenSeg
+# Loading altera_lnsim_ver.dps_extra_kick
+# Loading altera_lnsim_ver.dprio_init
+# Loading altera_lnsim_ver.altera_generic_pll_functions
+# Loading altera_lnsim_ver.generic_pll
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Usha  Hostname: DESKTOP-0NKOBLJ  ProcessID: 14404
+#           Attempting to use alternate WLF file "./wlfthq6j1f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthq6j1f
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+add wave -position end  sim:/tb_project3/myprj/mispred_EX_w
+add wave -position end  sim:/tb_project3/myprj/btb_hit_FE
+add wave -position end  sim:/tb_project3/myprj/btb_hit_ID
+add wave -position end  sim:/tb_project3/myprj/curr_btb_pred
+add wave -position end  sim:/tb_project3/myprj/pctarget_EX
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+run
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+add wave -position 12  sim:/tb_project3/myprj/btb_hit_w
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+add wave -position end  sim:/tb_project3/myprj/btb_value
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+add wave -position end  sim:/tb_project3/myprj/PC_FE
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:44 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# -- Compiling module SXT
+# 
+# Top level modules:
+# 	project3_frame
+# End time: 22:14:44 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.project3_frame
+# Loading work.SXT
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+add wave -position end  sim:/tb_project3/myprj/imem_index
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:16:28 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(130): 'i' is an invalid type in Generate loop. Must be a genvar.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(131): near "[": syntax error, unexpected '['.
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(131): (vlog-13205) Syntax error found in the scope following 'btb_target'. Is there a missing '::'?
+# End time: 22:16:28 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:17:24 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(130): 'i' is an invalid type in Generate loop. Must be a genvar.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(131): near "[": syntax error, unexpected '['.
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(131): (vlog-13205) Syntax error found in the scope following 'btb_target'. Is there a missing '::'?
+# End time: 22:17:24 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:18:04 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(144): 'i' is an invalid type in Generate loop. Must be a genvar.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(145): near "[": syntax error, unexpected '['.
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(145): (vlog-13205) Syntax error found in the scope following 'btb_target'. Is there a missing '::'?
+# End time: 22:18:05 on Mar 11,2020, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:18:17 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(144): 'i' is an invalid type in Generate loop. Must be a genvar.
+# ** Error: (vlog-13036) C:/Users/Usha/Documents/project4/project3/project3_frame.v(145): near "::": Operator only allowed in SystemVerilog.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(145): near "::": syntax error, unexpected ::.
+# ** Error: (vlog-13036) C:/Users/Usha/Documents/project4/project3/project3_frame.v(146): near "::": Operator only allowed in SystemVerilog.
+# -- Compiling module SXT
+# End time: 22:18:17 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:19:20 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(142): Declarations not allowed in unnamed block.
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(143): Illegal declaration after the statement near line '140'.  Declarations must precede statements.  Look for stray semicolons.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(143): near ")": syntax error, unexpected ')', expecting ';'.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(147): near "end": syntax error, unexpected end.
+# -- Compiling module SXT
+# End time: 22:19:20 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:19:25 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(142): Declarations not allowed in unnamed block.
+# ** Error: C:/Users/Usha/Documents/project4/project3/project3_frame.v(143): Illegal declaration after the statement near line '140'.  Declarations must precede statements.  Look for stray semicolons.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(143): near ")": syntax error, unexpected ')', expecting ';'.
+# ** Error: (vlog-13069) C:/Users/Usha/Documents/project4/project3/project3_frame.v(147): near "end": syntax error, unexpected end.
+# -- Compiling module SXT
+# End time: 22:19:25 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:19:46 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# -- Compiling module SXT
+# 
+# Top level modules:
+# 	project3_frame
+# End time: 22:19:46 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.project3_frame
+# Loading work.SXT
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+run
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:20:27 on Mar 11,2020
+# vlog -reportprogress 300 -work work C:/Users/Usha/Documents/project4/project3/project3_frame.v 
+# -- Compiling module project3_frame
+# -- Compiling module SXT
+# 
+# Top level modules:
+# 	project3_frame
+# End time: 22:20:27 on Mar 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.project3_frame
+# Loading work.SXT
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+run
+run
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/tb_project3/myprj/HEX_out
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/tb_project3/myprj/stall_pipe
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+add wave -position 1  sim:/tb_project3/RESET_N
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+add wave -position 10  sim:/tb_project3/myprj/inst_FE
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+add wave -position end  sim:/tb_project3/myprj/is_jmp_EX_w
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+run
+add wave -position 10  sim:/tb_project3/myprj/PC_ID
+restart
+# ** Warning: (vsim-3017) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Too few port connections. Expected 26, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_project3/myprj/myPll/pll_altera_pll_altera_pll_i_639 File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) C:/Users/Usha/Documents/project4/project3/Pll_sim/Pll.vo(45): [TFMPC] - Missing connection for port 'zdbfbclk'.
+run
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 50 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 10000.000000
+# Info: output_clock_low_period = 10000.000000
+# Info: hierarchical_name = tb_project3.myprj.myPll.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
+# Warning: The frequency of the reference clock signal differs from the specified frequency (50.0 MHz).
+run
